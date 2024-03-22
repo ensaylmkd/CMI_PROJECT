@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://brqewsadfeqwf"]
+
+[ext_resource type="PackedScene" uid="uid://c7ykwcqp5vipy" path="res://ennemyDraft.tscn" id="1_4lnb5"]
+[ext_resource type="Script" path="res://level.gd" id="1_nbb5u"]
+[ext_resource type="PackedScene" uid="uid://bmsu3tpr2hxsq" path="res://tourDraft.tscn" id="2_h0xge"]
+
+[sub_resource type="Curve2D" id="Curve2D_62nkg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 39, 44, 0, 0, 0, 0, 247, 290, 0, 0, 0, 0, 699, 380, 0, 0, 0, 0, 1147, 175)
+}
+point_count = 4
+
+[node name="draft" type="Node2D"]
+script = ExtResource("1_nbb5u")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_62nkg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(39, 44)
+rotates = false
+
+[node name="Ennemy" parent="Path2D/PathFollow2D" instance=ExtResource("1_4lnb5")]
+
+[node name="tour" parent="." instance=ExtResource("2_h0xge")]
+position = Vector2(260, 358)
+
+[node name="tour2" parent="." instance=ExtResource("2_h0xge")]
+position = Vector2(700, 336)
