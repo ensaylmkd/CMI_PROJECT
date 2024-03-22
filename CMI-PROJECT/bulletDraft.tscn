@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfl1lidvmsctg"]
+
+[ext_resource type="Script" path="res://bulletDraft.gd" id="1_vrwby"]
+[ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="1_xuiih"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3hgc8"]
+
+[node name="bullet" type="StaticBody2D"]
+script = ExtResource("1_vrwby")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3hgc8")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.242424, 0.375)
+texture = ExtResource("1_xuiih")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3hgc8")

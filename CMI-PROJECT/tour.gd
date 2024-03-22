@@ -16,3 +16,11 @@ func _ready():
 # Cette fonction est lue en boucle tant que le noeud à qui le script est lié est dans la "current scene"
 func _process(delta):
 	pass
+
+
+func _on_area_2d_area_entered(area):
+	print("Ennemy in the area")
+
+
+func _on_area_2d_area_exited(area):
+	print("Ennemy out of the area")

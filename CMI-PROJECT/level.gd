@@ -9,6 +9,7 @@ extends Node2D
 @onready var path = $Path2D
 @onready var follow = $Path2D/PathFollow2D
 
+
 var vague = 0 # Numéro de vague, va influencer le nb d'ennemis et leur niveau
 
 
@@ -16,6 +17,8 @@ var vague = 0 # Numéro de vague, va influencer le nb d'ennemis et leur niveau
 # On peut la comparer à la fonction main() en language C
 # Cette fonction ne sera lue qu'une seule fois (à part si elle est rappelée)
 func _ready():
+	print(follow.get_progress_ratio())
+	$Path2D/PathFollow2D/AnimationPlayer.play("new_animation")
 	pass
 
 
