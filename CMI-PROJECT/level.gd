@@ -17,15 +17,15 @@ var vague = 0 # Numéro de vague, va influencer le nb d'ennemis et leur niveau
 # On peut la comparer à la fonction main() en language C
 # Cette fonction ne sera lue qu'une seule fois (à part si elle est rappelée)
 func _ready():
+	# Test d'avancer d'un ennemi
 	print(follow.get_progress_ratio())
-	$Path2D/PathFollow2D/AnimationPlayer.play("new_animation")
-	pass
-
+	$Path2D/AnimationPlayer.play("new_animation")
 
 # Cette fonction est lue en boucle tant que le noeud à qui le script est lié est dans la "current scene"
 func _process(delta):
+	if $Path2D/PathFollow2D.progress_ratio == 1:
+		$Path2D/AnimationPlayer.play("new_animation")
 	pass
-
 
 func next_vague():
 	pass

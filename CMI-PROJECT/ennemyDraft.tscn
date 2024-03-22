@@ -29,7 +29,10 @@ script = ExtResource("1_iaa12")
 shape = SubResource("CircleShape2D_4lwiv")
 
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_wd7o5")
+disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.666667, 0.6875)
 sprite_frames = SubResource("SpriteFrames_wsh3u")
