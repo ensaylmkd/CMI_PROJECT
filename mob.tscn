@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxphq2ie4xmgo"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_cwcpy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_koiy7"]
+
+[node name="Mob" type="PathFollow2D" groups=["Mob"]]
+script = ExtResource("1_cwcpy")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_koiy7")
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-9, -18, -25, -2, -18, 22, 12, 22, 20, -3, 1, -24)
