@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7ykwcqp5vipy"]
+[gd_scene load_steps=9 format=3 uid="uid://c7ykwcqp5vipy"]
 
 [ext_resource type="Script" path="res://ennemy.gd" id="1_iaa12"]
 [ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="2_6lqwe"]
@@ -19,7 +19,7 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_85nr1"]
 resource_name = "move"
-length = 5.0
+length = 20.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,7 +27,7 @@ tracks/0/path = NodePath(".:progress_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
+"times": PackedFloat32Array(0, 20),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -48,13 +48,18 @@ tracks/0/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_l1vsw"]
+resource_name = "static"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vm1nh"]
 _data = {
 "RESET": SubResource("Animation_b7cbl"),
-"move": SubResource("Animation_85nr1")
+"move": SubResource("Animation_85nr1"),
+"static": SubResource("Animation_l1vsw")
 }
 
 [node name="ennemy" type="PathFollow2D"]
+loop = false
 script = ExtResource("1_iaa12")
 
 [node name="Area2D" type="Area2D" parent="."]
