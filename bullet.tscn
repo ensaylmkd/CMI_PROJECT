@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwbackcdishxh"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_7hcp3"]
+
+[node name="bullet" type="Node2D"]
+script = ExtResource("1_7hcp3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-24, -8, 24, -8, 24, 8, -24, 8)
+
+[node name="bulletbody" type="Polygon2D" parent="."]
+color = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-24, -8, 24, -8, 24, 8, -24, 8)
