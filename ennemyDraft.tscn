@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6ifiug3sf1ef"]
+[gd_scene load_steps=9 format=3 uid="uid://b6ifiug3sf1ef"]
 
 [ext_resource type="Script" path="res://ennemy.gd" id="1_iaa12"]
 [ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="2_6lqwe"]
@@ -54,15 +54,17 @@ _data = {
 "move": SubResource("Animation_85nr1")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_id5a2"]
+
 [node name="ennemy" type="PathFollow2D"]
 script = ExtResource("1_iaa12")
 
-[node name="Area2D" type="Area2D" parent="." groups=["ennemy"]]
+[node name="Areadetect" type="Area2D" parent="." groups=["ennemy"]]
 
-[node name="AreaCollision" type="CollisionShape2D" parent="Area2D"]
+[node name="AreaCollision" type="CollisionShape2D" parent="Areadetect"]
 shape = SubResource("CircleShape2D_4lwiv")
 
-[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+[node name="Polygon2D" type="Polygon2D" parent="Areadetect"]
 color = Color(0.654902, 0, 0, 1)
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
@@ -76,3 +78,12 @@ sprite_frames = SubResource("SpriteFrames_wsh3u")
 libraries = {
 "": SubResource("AnimationLibrary_vm1nh")
 }
+
+[node name="Areabody" type="Area2D" parent="." groups=["enemy"]]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areabody"]
+shape = SubResource("RectangleShape2D_id5a2")
+
+[connection signal="area_entered" from="Areabody" to="." method="_on_areabody_area_entered"]

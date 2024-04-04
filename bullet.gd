@@ -1,9 +1,11 @@
 extends Node2D
 
-var speed = 10
+var speed = 20
+var damage 
 var target : Area2D
 var direction : Vector2
 @onready var bullet = $bulletbody
+
 
 
 func _ready():
@@ -12,12 +14,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	direction = (target.global_position - self.global_position )
-	$bulletbody.look_at(target.global_position)
-	self.global_position+=direction*speed*delta 
+	print(target)
+	if target!= null: 
+		direction = (target.global_position - self.global_position )
+		$bulletbody.look_at(target.global_position)
+		self.global_position+=direction*speed*delta 
+	else:
+		self.global_position+=direction*speed*delta 
 	
-	
-
 
 func _on_area_2d_area_entered(area):
-	queue_free()
+	if area.is_in_group("enemy"):
+		print("hit")
+		area.get_parent().health -= damage
+		queue_free()
