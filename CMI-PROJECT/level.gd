@@ -32,7 +32,7 @@ func _process(delta):
 
 func next_wave():
 	await get_tree().create_timer(1).timeout
-	nb_ennemies += 1
+	nb_ennemies += 5
 	var wave_data = retriver_wave_data()
 	spawn_ennemies(wave_data)
 	await finish_spawn
@@ -44,7 +44,7 @@ func next_wave():
 func retriver_wave_data():
 	var wave_data = []
 	for i in range(nb_ennemies):
-		wave_data.append(["ennemy", randf_range(0.05,0.4)])
+		wave_data.append(["ennemy", randf_range(0.2,0.5)])
 	wave += 1
 	return wave_data
 
@@ -54,3 +54,5 @@ func spawn_ennemies(wave_data):
 		self.get_node("Path2D").add_child(new_ennemy, true)
 		await get_tree().create_timer(i[1]).timeout
 	emit_signal("finish_spawn")
+
+
