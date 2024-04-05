@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://brqewsadfeqwf"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_nbb5u"]
+[ext_resource type="PackedScene" uid="uid://bmsu3tpr2hxsq" path="res://tourDraft.tscn" id="2_h0xge"]
+[ext_resource type="PackedScene" uid="uid://c7ykwcqp5vipy" path="res://enemyDraft.tscn" id="2_onmf2"]
+
+[sub_resource type="Curve2D" id="Curve2D_62nkg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -102, 66, -117.468, -55.559, 117.468, 55.559, 478, 82, -96.7416, -102.106, 96.7416, 102.106, 562, 567, 0, 0, 0, 0, 1277, 544)
+}
+point_count = 4
+
+[node name="draft" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_nbb5u")
+enemy = ExtResource("2_onmf2")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-2, 10)
+curve = SubResource("Curve2D_62nkg")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="PosTow1" type="Marker2D" parent="."]
+position = Vector2(517, 51)
+
+[node name="tower" parent="PosTow1" instance=ExtResource("2_h0xge")]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="addTower" type="Button" parent="PosTow1"]
+editor_description = "1"
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+metadata/_edit_lock_ = true
+
+[node name="PosTow2" type="Marker2D" parent="."]
+position = Vector2(444, 281)
+
+[node name="tower" parent="PosTow2" instance=ExtResource("2_h0xge")]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="addTower" type="Button" parent="PosTow2"]
+editor_description = "1"
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+metadata/_edit_lock_ = true
+
+[node name="PosTow3" type="Marker2D" parent="."]
+position = Vector2(613, 452)
+
+[node name="tower" parent="PosTow3" instance=ExtResource("2_h0xge")]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="addTower" type="Button" parent="PosTow3"]
+editor_description = "1"
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="PosTow1/addTower" to="PosTow1/tower" method="_on_add_tower_pressed"]
+[connection signal="pressed" from="PosTow2/addTower" to="PosTow2/tower" method="_on_add_tower_pressed"]
+[connection signal="pressed" from="PosTow3/addTower" to="PosTow3/tower" method="_on_add_tower_pressed"]
