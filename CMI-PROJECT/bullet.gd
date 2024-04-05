@@ -6,8 +6,6 @@ var target : Area2D
 var direction : Vector2
 @onready var bullet = $bulletbody
 
-
-
 func _ready():
 	pass # Replace with function body.
 
@@ -23,7 +21,7 @@ func _process(delta):
 	
 
 func _on_area_2d_area_entered(area):
-	if area.is_in_group("ennemy"):
+	if area.is_in_group("enemy"):
 		print("hit")
 		area.get_parent().health -= damage
 		queue_free()

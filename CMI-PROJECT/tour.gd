@@ -6,8 +6,8 @@ extends StaticBody2D
 @onready var level = self.get_node("/root/draft") #REMPLACER DRAFT PAR LEVEL UNE FOIS LE PROJET FINI
 
 var type = 1
-var ennemy_in = []
-var ennemy_target
+var enemy_in = []
+var enemy_target
 var damage = 10
 var created = false
 
@@ -15,11 +15,11 @@ func _ready():
 	pass
 
 func _process(delta):
-	if ennemy_in and self.visible:
-		ennemy_target = ennemy_in[0]
-		tower.look_at(ennemy_target.global_position)
+	if enemy_in and self.visible:
+		enemy_target = enemy_in[0]
+		tower.look_at(enemy_target.global_position)
 		if time.is_stopped():
-			shoot_the_target(ennemy_target)
+			shoot_the_target(enemy_target)
 			time.start()
 		
 	if created:
@@ -32,15 +32,15 @@ func _process(delta):
 
 func _on_area_2d_area_entered(area):
 	if self.visible:
-		if area.is_in_group("ennemy"):
-			print("Ennemy in the area")
-			ennemy_in.append(area)
+		if area.is_in_group("enemy"):
+			print("enemy in the area")
+			enemy_in.append(area)
 
 func _on_area_2d_area_exited(area):
 	if self.visible:
-		if area.is_in_group("ennemy"):
-			print("Ennemy out of the area")
-			ennemy_in.erase(area)
+		if area.is_in_group("enemy"):
+			print("enemy out of the area")
+			enemy_in.erase(area)
 
 func _on_add_tower_pressed():
 	self.show()
@@ -58,6 +58,6 @@ func shoot_the_target(area):
 	if self.visible:
 		var bullet_scene = load("res://bullet.tscn")
 		var bullet = bullet_scene.instantiate()
-		bullet.target = ennemy_target
+		bullet.target = enemy_target
 		bullet.damage = damage
 		self.add_child(bullet)
