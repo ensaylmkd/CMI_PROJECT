@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqn0s65pbh2vh"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_j764s"]
+[ext_resource type="FontFile" uid="uid://b2dj1y52soahl" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="2_xhu4u"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j764s")
+
+[node name="play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 176.0
+offset_right = 645.0
+offset_bottom = 245.0
+theme_override_fonts/font = ExtResource("2_xhu4u")
+theme_override_font_sizes/font_size = 40
+text = "PLAY"
+
+[node name="options" type="Button" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 260.0
+offset_right = 646.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("2_xhu4u")
+theme_override_font_sizes/font_size = 40
+text = "OPTIONS"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 342.0
+offset_right = 647.0
+offset_bottom = 410.0
+theme_override_fonts/font = ExtResource("2_xhu4u")
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
