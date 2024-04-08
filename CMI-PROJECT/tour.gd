@@ -60,4 +60,4 @@ func shoot_the_target(area):
 		var bullet = bullet_scene.instantiate()
 		bullet.target = enemy_target
 		bullet.damage = damage
-		self.add_child(bullet)
+		$bullets.add_child(bullet)
