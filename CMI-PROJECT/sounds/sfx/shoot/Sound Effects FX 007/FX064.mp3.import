@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctby5pyqpjjo8"
+path="res://.godot/imported/FX064.mp3-e96445346076af8c838bc2f5cdca6de8.mp3str"
+
+[deps]
+
+source_file="res://sounds/sfx/shoot/Sound Effects FX 007/FX064.mp3"
+dest_files=["res://.godot/imported/FX064.mp3-e96445346076af8c838bc2f5cdca6de8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

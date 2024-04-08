@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://brqewsadfeqwf"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_nbb5u"]
-[ext_resource type="PackedScene" uid="uid://bmsu3tpr2hxsq" path="res://tourDraft.tscn" id="2_h0xge"]
 [ext_resource type="PackedScene" uid="uid://c7ykwcqp5vipy" path="res://enemyDraft.tscn" id="2_onmf2"]
+[ext_resource type="PackedScene" uid="uid://ddc3tnsyjatxg" path="res://tower_controller.tscn" id="4_wsk17"]
 
 [sub_resource type="Curve2D" id="Curve2D_62nkg"]
 _data = {
@@ -21,51 +21,22 @@ curve = SubResource("Curve2D_62nkg")
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="PosTow1" type="Marker2D" parent="."]
-position = Vector2(517, 51)
+[node name="buttons" type="Node2D" parent="."]
 
-[node name="tower" parent="PosTow1" instance=ExtResource("2_h0xge")]
-visible = false
-metadata/_edit_lock_ = true
+[node name="Button3" parent="buttons" instance=ExtResource("4_wsk17")]
+offset_left = 434.0
+offset_top = 467.0
+offset_right = 446.0
+offset_bottom = 479.0
 
-[node name="addTower" type="Button" parent="PosTow1"]
-editor_description = "1"
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-metadata/_edit_lock_ = true
+[node name="Button2" parent="buttons" instance=ExtResource("4_wsk17")]
+offset_left = 611.0
+offset_top = 226.0
+offset_right = 623.0
+offset_bottom = 238.0
 
-[node name="PosTow2" type="Marker2D" parent="."]
-position = Vector2(444, 281)
-
-[node name="tower" parent="PosTow2" instance=ExtResource("2_h0xge")]
-visible = false
-metadata/_edit_lock_ = true
-
-[node name="addTower" type="Button" parent="PosTow2"]
-editor_description = "1"
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-metadata/_edit_lock_ = true
-
-[node name="PosTow3" type="Marker2D" parent="."]
-position = Vector2(613, 452)
-
-[node name="tower" parent="PosTow3" instance=ExtResource("2_h0xge")]
-visible = false
-metadata/_edit_lock_ = true
-
-[node name="addTower" type="Button" parent="PosTow3"]
-editor_description = "1"
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-metadata/_edit_lock_ = true
-
-[connection signal="pressed" from="PosTow1/addTower" to="PosTow1/tower" method="_on_add_tower_pressed"]
-[connection signal="pressed" from="PosTow2/addTower" to="PosTow2/tower" method="_on_add_tower_pressed"]
-[connection signal="pressed" from="PosTow3/addTower" to="PosTow3/tower" method="_on_add_tower_pressed"]
+[node name="Button" parent="buttons" instance=ExtResource("4_wsk17")]
+offset_left = 359.0
+offset_top = 166.0
+offset_right = 371.0
+offset_bottom = 178.0

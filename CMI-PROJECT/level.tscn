@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://58kynu1eepm6"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_wy2s2"]
-[ext_resource type="FontFile" uid="uid://bgaulottkxfln" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
+[ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
 [ext_resource type="PackedScene" uid="uid://c7ykwcqp5vipy" path="res://enemyDraft.tscn" id="2_1p7hm"]
 [ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="2_dowv7"]
 [ext_resource type="Texture2D" uid="uid://cwqin7afga50w" path="res://graphics/tileset/asset page 1.png" id="3_ivj83"]

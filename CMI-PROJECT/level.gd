@@ -30,14 +30,13 @@ func _ready():
 func _process(delta):
 	#if follow.progress_ratio == 1:
 	#	$Path2D/AnimationPlayer.play("new_animation")
-	if self.get_node("Path2D").get_children(false) == [] and started:
+	if self.get_node("Path2D").get_children(false) == [] and started: # à chaque fin de vague
 		started = false
-		
-		for sc in ["PosTow1", "PosTow2", "PosTow3"]:
-			for i in self.get_node(sc + "/tower/bullets").get_children(false):
-				i.queue_free()
-		
-		await get_tree().create_timer(2).timeout
+		for sc in $buttons.get_children(false): # supprime toute les balles
+			if sc.created:
+				sc.get_node("tower").reset_bullets()
+				
+		await get_tree().create_timer(2).timeout # attend 2 sec et lance la prochaine vague
 		next_wave()
 
 func next_wave():
