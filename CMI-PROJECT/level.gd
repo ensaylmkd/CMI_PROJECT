@@ -32,6 +32,11 @@ func _process(delta):
 	#	$Path2D/AnimationPlayer.play("new_animation")
 	if self.get_node("Path2D").get_children(false) == [] and started:
 		started = false
+		
+		for sc in ["PosTow1", "PosTow2", "PosTow3"]:
+			for i in self.get_node(sc + "/tower/bullets").get_children(false):
+				i.queue_free()
+		
 		await get_tree().create_timer(2).timeout
 		next_wave()
 
