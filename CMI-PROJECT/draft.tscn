@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://brqewsadfeqwf"]
 
-[ext_resource type="PackedScene" uid="uid://c7ykwcqp5vipy" path="res://ennemyDraft.tscn" id="1_4lnb5"]
 [ext_resource type="Script" path="res://level.gd" id="1_nbb5u"]
 [ext_resource type="PackedScene" uid="uid://bmsu3tpr2hxsq" path="res://tourDraft.tscn" id="2_h0xge"]
+[ext_resource type="PackedScene" uid="uid://c7ykwcqp5vipy" path="res://enemyDraft.tscn" id="2_onmf2"]
 
 [sub_resource type="Curve2D" id="Curve2D_62nkg"]
 _data = {
@@ -11,8 +11,9 @@ _data = {
 point_count = 4
 
 [node name="draft" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_nbb5u")
-ennemy = ExtResource("1_4lnb5")
+enemy = ExtResource("2_onmf2")
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(-2, 10)

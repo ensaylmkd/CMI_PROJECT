@@ -1,19 +1,27 @@
-extends RigidBody2D
+extends Node2D
 
-@export var cible = ""
+var speed = 30
+var damage 
+var target : Area2D
+var direction : Vector2
+@onready var bullet = $bulletbody
 
 func _ready():
 	pass # Replace with function body.
 
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if target!= null: 
+		direction = (target.global_position - self.global_position )
+		$bulletbody.look_at(target.global_position)
+		self.global_position+=direction*speed*delta 
+	else:
+		self.global_position+=direction*speed*delta 
+	
 
-# Voir pour implémenter target dans _process pour avoir acces à delta
-
-func target(t):
-	var direction = (t.global_position - self.global_position)
-	var angle = self.transform.x.angle_to(direction)
-	self.rotate(sign(angle)*min(0.17*10, abs(angle))) # delta ~= 0.17
-
-#func reset_rotation(default_rotation):
-#	self.rotation = default_rotation
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("enemy"):
+		#print("hit")
+		area.get_parent().health -= damage
+		queue_free()

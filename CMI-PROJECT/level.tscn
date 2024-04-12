@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://58kynu1eepm6"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_wy2s2"]
-[ext_resource type="FontFile" uid="uid://bwwtb6e3fs63m" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
+[ext_resource type="FontFile" uid="uid://cvjs5msog0vje" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
+[ext_resource type="PackedScene" uid="uid://c7ykwcqp5vipy" path="res://enemyDraft.tscn" id="2_1p7hm"]
 [ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="2_dowv7"]
-[ext_resource type="PackedScene" uid="uid://c7ykwcqp5vipy" path="res://ennemyDraft.tscn" id="2_wued6"]
 [ext_resource type="Texture2D" uid="uid://cwqin7afga50w" path="res://graphics/tileset/asset page 1.png" id="3_ivj83"]
 [ext_resource type="Texture2D" uid="uid://euovqup5a1c" path="res://graphics/tileset/page 2.png" id="4_jc2iy"]
 
@@ -237,7 +237,7 @@ size = Vector2(38, 78)
 z_index = 4096
 y_sort_enabled = true
 script = ExtResource("1_wy2s2")
-ennemy = ExtResource("2_wued6")
+enemy = ExtResource("2_1p7hm")
 
 [node name="Interface" type="Control" parent="."]
 layout_mode = 3
@@ -252,8 +252,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1152.0
-offset_right = 5760.0
-offset_bottom = 3888.0
+offset_right = 3456.0
+offset_bottom = 2592.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_yxshp")
@@ -274,6 +274,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 27.0
 grow_horizontal = 2
+value = 50.0
 show_percentage = false
 
 [node name="GoldShow" type="HBoxContainer" parent="Interface"]

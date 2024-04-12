@@ -1,47 +1,63 @@
 extends StaticBody2D
-# Ceci est le script qui est appliqué à chacune des tours
 
-# Chaque tour aura une variable personnalisée pour informer quelle type de tour elle est 
-@export var type: int = 0 # 0 = Niveau de départ <=> la tour n'est pas encore construite
+@onready var time = $Cooldown
+@onready var tower = $Towershape
+@onready var add_button = self.get_node("../addTower")
+@onready var level = self.get_node("/root/draft") #REMPLACER DRAFT PAR LEVEL UNE FOIS LE PROJET FINI
 
-@onready var bullet = $bullet
+var type = 1
+var enemy_in = []
+var enemy_target
+var damage = 10
+var created = false
 
-var ennemy_in = false
-var ennemy: Area2D = null
-
-# (en gdscript, on déclare une fonction avec func et une variable avec var)
-
-# La fonction _ready() est lue dès que le noeud qui est accroché à ce script est dans la "current scene"
-# On peut la comparer à la fonction main() en language C
-# Cette fonction ne sera lue qu'une seule fois (à part si elle est rappelée)
 func _ready():
-#	bullet.reset_rotation(default_rotation)
 	pass
 
-
-# Cette fonction est lue en boucle tant que le noeud à qui le script est lié est dans la "current scene"
 func _process(delta):
-	if ennemy_in and self.visible:
-		bullet.target(ennemy)
-
+	if enemy_in and self.visible:
+		enemy_target = enemy_in[0]
+		tower.look_at(enemy_target.global_position)
+		if time.is_stopped():
+			shoot_the_target(enemy_target)
+			time.start()
+		
+	if created:
+		if level.gold < 60:
+			add_button.disabled = true
+		
+		if level.gold >= 60:
+			add_button.disabled = false
+			add_button.text = "UP"
 
 func _on_area_2d_area_entered(area):
 	if self.visible:
-		print("Ennemy in the area")
-		ennemy_in = true
-		ennemy = area
-
+		if area.is_in_group("enemyDetect"):
+			#print("enemy in the area")
+			enemy_in.append(area)
 
 func _on_area_2d_area_exited(area):
 	if self.visible:
-		print("Ennemy out of the area")
-		ennemy_in = false
-		ennemy = null
-#	bullet.reset_rotation(default_rotation)
-#	print(bullet.rotation)
-
+		if area.is_in_group("enemyDetect"):
+			#print("enemy out of the area")
+			enemy_in.erase(area)
 
 func _on_add_tower_pressed():
 	self.show()
-	if self.get_node("../addTower"):
-		self.get_node("../addTower").hide()
+	if created:
+		if type == 1:
+			time.wait_time = 0.1
+			level.gold -= 60
+			
+	if add_button and created == false:
+		add_button.disabled = true
+		add_button.position.y += 30
+		created = true
+
+func shoot_the_target(area):
+	if self.visible:
+		var bullet_scene = load("res://bullet.tscn")
+		var bullet = bullet_scene.instantiate()
+		bullet.target = enemy_target
+		bullet.damage = damage
+		$bullets.add_child(bullet)
