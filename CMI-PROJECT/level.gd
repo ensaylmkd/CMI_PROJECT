@@ -11,7 +11,7 @@ extends Node2D
 @onready var follow = $Path2D/enemy
 @onready var nb_enemies = 0
 
-@export var gold = 0
+@export var gold = 50
 var wave = 0 # Numéro de vague, va influencer le nb d'ennemis et leur niveau
 signal finish_spawn
 var started = false
@@ -33,7 +33,7 @@ func _process(delta):
 	if self.get_node("Path2D").get_children(false) == [] and started: # à chaque fin de vague
 		started = false
 		for sc in $buttons.get_children(false): # supprime toute les balles
-			if sc.created:
+			if sc.created:s
 				sc.get_node("tower").reset_bullets()
 				
 		await get_tree().create_timer(2).timeout # attend 2 sec et lance la prochaine vague

@@ -1,10 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddc3tnsyjatxg"]
+[gd_scene load_steps=3 format=3 uid="uid://ddc3tnsyjatxg"]
 
 [ext_resource type="Script" path="res://tower_controller.gd" id="1_n7hoa"]
+[ext_resource type="Texture2D" uid="uid://c8ep664wfdhtv" path="res://icon.svg" id="2_a76v3"]
 
 [node name="Button" type="Button"]
-offset_right = 12.0
-offset_bottom = 12.0
+anchors_preset = -1
+flat = true
+icon_alignment = 1
 script = ExtResource("1_n7hoa")
+metadata/_edit_use_anchors_ = true
+
+[node name="button_visual" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -40.0
+offset_right = 25.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="button_visual"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("2_a76v3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="button_visual"]
+layout_mode = 2
+text = "BUY"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

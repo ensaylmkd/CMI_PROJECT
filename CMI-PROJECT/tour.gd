@@ -4,11 +4,16 @@ extends StaticBody2D
 @onready var tower = $Towershape
 @onready var area_range = $Area2D/ShootArea 
 @onready var level = self.get_node("/root/draft") #REMPLACER DRAFT PAR LEVEL UNE FOIS LE PROJET FINI
+@onready var upgrade_control = $upgrader_sys/upgrade_control
 
 var enemy_in = []
 var enemy_target
 
 var damage
+
+var lvl_damage = 1
+var lvl_firerate = 1
+var lvl_range = 1
 
 var created = false
 
@@ -47,11 +52,21 @@ func reset_bullets():
 	for i in $bullets.get_children(false):
 		i.queue_free()
 
+
 func upgrade_speed():
+	lvl_firerate += 1
 	time.wait_time -=0.3 
 	
 func upgrade_damage():
+	lvl_damage += 1
 	damage += 5
 
 func upgrade_range():
+	lvl_damage += 1
 	area_range.shape.radius += 20
+
+
+func _on_upgrade_notifier_pressed():
+	upgrade_control.visible = true
+	await get_tree().create_timer(5).timeout
+	upgrade_control.visible = false
