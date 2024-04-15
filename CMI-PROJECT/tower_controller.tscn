@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://c8ep664wfdhtv" path="res://icon.svg" id="2_a76v3"]
 
 [node name="Button" type="Button"]
-anchors_preset = -1
 flat = true
 icon_alignment = 1
 script = ExtResource("1_n7hoa")

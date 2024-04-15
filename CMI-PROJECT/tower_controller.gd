@@ -2,7 +2,7 @@ extends Button
 
 @onready var level = self.get_node("/root/draft")
 
-@export var cost = 50
+@export var cost = 30
 var created = false
 
 func _on_pressed():

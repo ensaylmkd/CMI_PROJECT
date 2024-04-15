@@ -27,6 +27,7 @@ func _process(delta):
 		queue_free()
 	elif health <=0 :
 		self.get_node("/root/draft").add_gold(gold)
+		print(self.get_node("/root/draft").gold)
 		queue_free()
 
 func _physics_process(delta):

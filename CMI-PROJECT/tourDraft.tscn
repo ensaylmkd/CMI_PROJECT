@@ -32,6 +32,7 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+toggle_mode = true
 text = "UP"
 
 [node name="upgrade_control" type="Control" parent="upgrader_sys"]
@@ -83,6 +84,24 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "range"
 
+[node name="upgrade_cancel" type="Button" parent="upgrader_sys/upgrade_control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "X"
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="upgrader_sys/upgrade_notifier" to="." method="_on_upgrade_notifier_pressed"]
+[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_damage" to="." method="_on_upgrade_damage_pressed"]
+[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_firerate" to="." method="_on_upgrade_firerate_pressed"]
+[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_range" to="." method="_on_upgrade_range_pressed"]
+[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_cancel" to="." method="_on_upgrade_cancel_pressed"]
