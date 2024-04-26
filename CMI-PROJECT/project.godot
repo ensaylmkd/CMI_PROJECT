@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CMI_PROJECT"
-run/main_scene="res://draft.tscn"
+run/main_scene="res://level.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 

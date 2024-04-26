@@ -10,6 +10,6 @@ func _on_pressed():
 			var tower_scene = load("res://tourDraft.tscn")
 			var tower = tower_scene.instantiate()
 			self.add_child(tower)
-			level.gold -= cost
+			level.add_gold(-cost)
 			$button_visual.visible = false
 			created = true

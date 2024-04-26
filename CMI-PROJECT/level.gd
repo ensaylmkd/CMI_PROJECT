@@ -11,14 +11,13 @@ extends Node2D
 @onready var nb_enemies = 0
 @onready var hp = 100
 @onready var pause = $Interface/pause
-@onready var healthbar = $Interface/HealthBar
+@onready var healthbar = $Interface/HealthBar	
 @onready var goldcount = $Interface/GoldShow/Label
 
-@export var gold = 0
+@export var gold = 30
 var wave = 0 # Numéro de vague, va influencer le nb d'ennemis et leur niveau
 signal finish_spawn
 var started = false
-var enemies_wave = {"1":0,"2":0,"3":0,"4":0,"5":0,}
 
 # La fonction _ready() est lue dès que le noeud qui est accroché à ce script est dans la "current scene"
 # Cette fonction ne sera lue qu'une seule fois (à part si elle est rappelée)
@@ -29,7 +28,7 @@ func _ready():
 	next_wave()
 
 # Cette fonction est lue en boucle tant que le noeud à qui le script est lié est dans la "current scene"
-func _process(delta):
+func _process(_delta):
 	if self.get_node("Path2D").get_children(false) == [] and started:
 		started = false
 		
@@ -78,4 +77,4 @@ func damage_base(damage):
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_COMMA:
-			add_gold(99999999999999)
+			add_gold(9999999999)

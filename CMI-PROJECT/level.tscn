@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://58kynu1eepm6"]
+[gd_scene load_steps=17 format=3 uid="uid://58kynu1eepm6"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_wy2s2"]
 [ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="2_dowv7"]
 [ext_resource type="Texture2D" uid="uid://cwqin7afga50w" path="res://graphics/tileset/asset page 1.png" id="3_ivj83"]
 [ext_resource type="Texture2D" uid="uid://euovqup5a1c" path="res://graphics/tileset/page 2.png" id="4_jc2iy"]
+[ext_resource type="PackedScene" uid="uid://mtnooanifrgb" path="res://pause.tscn" id="5_de5at"]
 [ext_resource type="PackedScene" uid="uid://ddc3tnsyjatxg" path="res://tower_controller.tscn" id="7_wwqny"]
 
 [sub_resource type="Animation" id="Animation_b4xgt"]
@@ -245,7 +246,20 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-metadata/_edit_group_ = true
+
+[node name="pause" parent="Interface" instance=ExtResource("5_de5at")]
+process_mode = 1
+visible = false
+clip_contents = true
+layout_mode = 1
+
+[node name="HealthBar" type="ProgressBar" parent="Interface"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 27.0
+grow_horizontal = 2
+show_percentage = false
 
 [node name="Label" type="Label" parent="Interface"]
 layout_mode = 1
@@ -253,8 +267,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1152.0
-offset_right = 18432.0
-offset_bottom = 11016.0
+offset_right = 25344.0
+offset_bottom = 14904.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_yxshp")
@@ -269,15 +283,6 @@ libraries = {
 "": SubResource("AnimationLibrary_l4362")
 }
 
-[node name="ProgressBar" type="ProgressBar" parent="Interface"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 27.0
-grow_horizontal = 2
-value = 50.0
-show_percentage = false
-
 [node name="GoldShow" type="HBoxContainer" parent="Interface"]
 layout_mode = 0
 offset_left = 6.0
@@ -285,7 +290,6 @@ offset_top = 33.0
 offset_right = 155.0
 offset_bottom = 74.0
 theme_override_constants/separation = 8
-metadata/_edit_group_ = true
 
 [node name="Gold" type="TextureRect" parent="Interface/GoldShow"]
 layout_mode = 2

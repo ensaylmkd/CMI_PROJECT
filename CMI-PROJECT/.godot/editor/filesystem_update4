@@ -1,5 +1,6 @@
-res://draft.tscn
-res://tourDraft.tscn
-res://tower_controller.tscn
+res://control.tscn
+res://level.gd
+res://pause.tscn
 res://level.tscn
-res://enemyDraft.tscn
+res://pause.gd
+res://tower_controller.gd
