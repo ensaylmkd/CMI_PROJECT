@@ -11,7 +11,7 @@ extends Node2D
 @onready var follow = $Path2D/enemy
 @onready var nb_enemies = 0
 
-@export var gold = 50
+@export var gold = 1000
 var wave = 0 # Numéro de vague, va influencer le nb d'ennemis et leur niveau
 signal finish_spawn
 var started = false

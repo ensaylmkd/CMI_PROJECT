@@ -1,6 +1,7 @@
 Button
-Control
+Panel
 Label
+Control
 VBoxContainer
 TextureRect
 Node2D

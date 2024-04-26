@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmsu3tpr2hxsq"]
+[gd_scene load_steps=4 format=3 uid="uid://bmsu3tpr2hxsq"]
 
 [ext_resource type="Script" path="res://tour.gd" id="1_23wbe"]
+[ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="2_ucynp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6c04h"]
 resource_local_to_scene = true
@@ -13,6 +14,7 @@ script = ExtResource("1_23wbe")
 polygon = PackedVector2Array(-24, -16, 24, -16, 24, 16, -24, 16)
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="ShootArea" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_6c04h")
@@ -29,6 +31,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="upgrade_notifier" type="Button" parent="upgrader_sys"]
+visible = false
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
@@ -39,50 +42,131 @@ text = "UP"
 visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 9.0
-offset_top = -90.0
-offset_right = 142.0
-offset_bottom = 89.0
+offset_left = 16.0
+offset_top = -89.0
+offset_right = 149.0
+offset_bottom = 90.0
 
-[node name="upgrade_damage" type="Button" parent="upgrader_sys/upgrade_control"]
+[node name="upgrade_damage" type="Panel" parent="upgrader_sys/upgrade_control"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -4.0
-offset_right = 4.0
-offset_bottom = 8.0
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 70.0
 grow_horizontal = 2
-text = "dam"
 
-[node name="upgrade_firerate" type="Button" parent="upgrader_sys/upgrade_control"]
+[node name="button_visual" type="VBoxContainer" parent="upgrader_sys/upgrade_control/upgrade_damage"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -3.5
-offset_top = -3.5
-offset_right = 4.5
-offset_bottom = 4.5
+offset_left = -38.5
+offset_top = -20.5
+offset_right = 38.5
+offset_bottom = 20.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "speed"
+alignment = 1
 
-[node name="upgrade_range" type="Button" parent="upgrader_sys/upgrade_control"]
+[node name="Label" type="Label" parent="upgrader_sys/upgrade_control/upgrade_damage/button_visual"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ucynp")
+theme_override_font_sizes/font_size = 12
+text = "damage: lvl 1 "
+horizontal_alignment = 1
+
+[node name="upgrade_damage" type="Button" parent="upgrader_sys/upgrade_control/upgrade_damage/button_visual"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ucynp")
+theme_override_font_sizes/font_size = 10
+text = "upgrade"
+
+[node name="upgrade_firerate" type="Panel" parent="upgrader_sys/upgrade_control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -35.0
+offset_right = 50.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="button_visual" type="VBoxContainer" parent="upgrader_sys/upgrade_control/upgrade_firerate"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -20.5
+offset_right = 38.5
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="upgrader_sys/upgrade_control/upgrade_firerate/button_visual"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ucynp")
+theme_override_font_sizes/font_size = 12
+text = "speed: lvl 1 "
+horizontal_alignment = 1
+
+[node name="upgrade_firerate" type="Button" parent="upgrader_sys/upgrade_control/upgrade_firerate/button_visual"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ucynp")
+theme_override_font_sizes/font_size = 10
+text = "upgrade"
+
+[node name="upgrade_range" type="Panel" parent="upgrader_sys/upgrade_control"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -8.0
-offset_right = 4.0
+offset_left = -50.0
+offset_top = -70.0
+offset_right = 50.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "range"
+
+[node name="button_visual" type="VBoxContainer" parent="upgrader_sys/upgrade_control/upgrade_range"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -20.5
+offset_right = 42.0
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="upgrader_sys/upgrade_control/upgrade_range/button_visual"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ucynp")
+theme_override_font_sizes/font_size = 12
+text = "range: lvl 1 "
+horizontal_alignment = 1
+
+[node name="upgrade_range" type="Button" parent="upgrader_sys/upgrade_control/upgrade_range/button_visual"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ucynp")
+theme_override_font_sizes/font_size = 10
+text = "upgrade"
 
 [node name="upgrade_cancel" type="Button" parent="upgrader_sys/upgrade_control"]
 layout_mode = 1
@@ -101,7 +185,7 @@ text = "X"
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="upgrader_sys/upgrade_notifier" to="." method="_on_upgrade_notifier_pressed"]
-[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_damage" to="." method="_on_upgrade_damage_pressed"]
-[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_firerate" to="." method="_on_upgrade_firerate_pressed"]
-[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_range" to="." method="_on_upgrade_range_pressed"]
+[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_damage/button_visual/upgrade_damage" to="." method="_on_upgrade_damage_pressed"]
+[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_firerate/button_visual/upgrade_firerate" to="." method="_on_upgrade_firerate_pressed"]
+[connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_range/button_visual/upgrade_range" to="." method="_on_upgrade_range_pressed"]
 [connection signal="pressed" from="upgrader_sys/upgrade_control/upgrade_cancel" to="." method="_on_upgrade_cancel_pressed"]

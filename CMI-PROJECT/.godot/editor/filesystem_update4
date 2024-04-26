@@ -1,5 +1,6 @@
-res://draft.tscn
 res://tourDraft.tscn
+res://draft.tscn
 res://tower_controller.tscn
 res://level.tscn
 res://tour.gd
+res://level.gd

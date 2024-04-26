@@ -23,19 +23,19 @@ curve = SubResource("Curve2D_62nkg")
 
 [node name="buttons" type="Node2D" parent="."]
 
-[node name="Button3" parent="buttons" instance=ExtResource("4_wsk17")]
+[node name="tower_spawner" parent="buttons" instance=ExtResource("4_wsk17")]
 offset_left = 434.0
 offset_top = 467.0
 offset_right = 446.0
 offset_bottom = 479.0
 
-[node name="Button2" parent="buttons" instance=ExtResource("4_wsk17")]
+[node name="tower_spawner2" parent="buttons" instance=ExtResource("4_wsk17")]
 offset_left = 611.0
 offset_top = 226.0
 offset_right = 623.0
 offset_bottom = 238.0
 
-[node name="Button" parent="buttons" instance=ExtResource("4_wsk17")]
+[node name="towerspawner3" parent="buttons" instance=ExtResource("4_wsk17")]
 offset_left = 359.0
 offset_top = 166.0
 offset_right = 371.0
