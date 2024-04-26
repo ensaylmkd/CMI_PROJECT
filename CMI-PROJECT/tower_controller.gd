@@ -1,6 +1,6 @@
 extends Button
 
-@onready var level = self.get_node("/root/draft")
+@onready var level = self.get_node("/root/Level")
 
 @export var cost = 30
 var created = false

@@ -8,10 +8,13 @@ extends Node2D
 # @onready = dès que le script est chargé, la variable est chargée
 # $NAME = lien vers un différent noeud grace au chemin nécessaire pour y parvenir depuis le noeud auquel ce script est lié
 @onready var path = $Path2D
-@onready var follow = $Path2D/enemy
 @onready var nb_enemies = 0
+@onready var hp = 100
+@onready var pause = $Interface/pause
+@onready var healthbar = $Interface/HealthBar
+@onready var goldcount = $Interface/GoldShow/Label
 
-@export var gold = 1000
+@export var gold = 0
 var wave = 0 # Numéro de vague, va influencer le nb d'ennemis et leur niveau
 signal finish_spawn
 var started = false
@@ -20,23 +23,21 @@ var enemies_wave = {"1":0,"2":0,"3":0,"4":0,"5":0,}
 # La fonction _ready() est lue dès que le noeud qui est accroché à ce script est dans la "current scene"
 # Cette fonction ne sera lue qu'une seule fois (à part si elle est rappelée)
 func _ready():
-	# Test d'avancer d'un ennemi
-	#print(follow.get_progress_ratio())
-	#$Path2D/AnimationPlayer.play("new_animation")
+	healthbar.max_value = hp
+	healthbar.value = hp
+	goldcount.text = str(gold)
 	next_wave()
-	pass
 
 # Cette fonction est lue en boucle tant que le noeud à qui le script est lié est dans la "current scene"
 func _process(delta):
-	#if follow.progress_ratio == 1:
-	#	$Path2D/AnimationPlayer.play("new_animation")
-	if self.get_node("Path2D").get_children(false) == [] and started: # à chaque fin de vague
+	if self.get_node("Path2D").get_children(false) == [] and started:
 		started = false
-		for sc in $buttons.get_children(false): # supprime toute les balles
-			if sc.created:
-				sc.get_node("tower").reset_bullets()
-				
-		await get_tree().create_timer(2).timeout # attend 2 sec et lance la prochaine vague
+		
+#		for sc in ["PosTow1", "PosTow2", "PosTow3"]:
+#			for i in self.get_node(sc + "/tower/bullets").get_children(false):
+#				i.queue_free()
+		
+		await get_tree().create_timer(2).timeout
 		next_wave()
 
 func next_wave():
@@ -66,4 +67,15 @@ func spawn_enemies(wave_data):
 
 func add_gold(g):
 	gold += g
-	print(gold)
+	goldcount.text = str(gold)
+	
+func damage_base(damage):
+	hp -= damage
+	healthbar.value = hp
+	if hp <= 0:
+		get_tree().change_scene_to_file("res://control.tscn")
+		
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_COMMA:
+			add_gold(99999999999999)

@@ -1,8 +1,9 @@
+ProgressBar
+Node2D
 Button
 Panel
 Label
 Control
 VBoxContainer
 TextureRect
-Node2D
 Marker2D

@@ -3,7 +3,7 @@ extends StaticBody2D
 @onready var time = $Cooldown
 @onready var tower = $Towershape
 @onready var area_range = $Area2D/ShootArea 
-@onready var level = self.get_node("/root/draft") #REMPLACER DRAFT PAR LEVEL UNE FOIS LE PROJET FINI
+@onready var level = self.get_node("/root/Level") #REMPLACER DRAFT PAR LEVEL UNE FOIS LE PROJET FINI
 @onready var upgrade_control = $upgrader_sys/upgrade_control
 @onready var label_damage = $upgrader_sys/upgrade_control/upgrade_damage/button_visual/Label
 @onready var label_speed = $upgrader_sys/upgrade_control/upgrade_firerate/button_visual/Label
@@ -24,7 +24,7 @@ signal upgraded
 
 func _ready():
 	time.wait_time = 1.5
-	damage = 20
+	damage = 10
 	area_range.shape.radius = 100
 	
 func _process(delta):

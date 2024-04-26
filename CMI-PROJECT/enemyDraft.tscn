@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_vk1k2"]
 [ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="2_mjvtp"]
-[ext_resource type="Texture2D" uid="uid://bununsscid21w" path="res://graphics/ennemies/stormtrooper/FO Stormtrooper B.png" id="3_0itck"]
-[ext_resource type="Texture2D" uid="uid://bvtpjtwo5o5qt" path="res://graphics/ennemies/stormtrooper/Imperial Crew.png" id="4_ua4ia"]
-[ext_resource type="Texture2D" uid="uid://cqp4mtvoi42ix" path="res://graphics/ennemies/stormtrooper/Sith Jet Trooper.png" id="5_56wvf"]
-[ext_resource type="Texture2D" uid="uid://50rhas3rjapk" path="res://graphics/ennemies/drones/1 Drones/3/Idle.png" id="6_sbxfw"]
-[ext_resource type="Texture2D" uid="uid://1fhw0faylo5v" path="res://graphics/ennemies/striker/spr_StrikerRun_strip.png" id="7_ucos7"]
+[ext_resource type="Texture2D" uid="uid://bgw8x4xxu5sef" path="res://graphics/ennemies/stormtrooper/FO Stormtrooper B.png" id="3_0itck"]
+[ext_resource type="Texture2D" uid="uid://c7jly41aivamp" path="res://graphics/ennemies/stormtrooper/Imperial Crew.png" id="4_ua4ia"]
+[ext_resource type="Texture2D" uid="uid://ckixmuqmnpjsg" path="res://graphics/ennemies/stormtrooper/Sith Jet Trooper.png" id="5_56wvf"]
+[ext_resource type="Texture2D" uid="uid://cmh4eafkuhcuf" path="res://graphics/ennemies/drones/1 Drones/3/Idle.png" id="6_sbxfw"]
+[ext_resource type="Texture2D" uid="uid://bsfc7t8mkwkhh" path="res://graphics/ennemies/striker/spr_StrikerRun_strip.png" id="7_ucos7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4lwiv"]
 radius = 34.0
@@ -221,3 +221,14 @@ offset = Vector2(0, -16)
 libraries = {
 "": SubResource("AnimationLibrary_vm1nh")
 }
+
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+show_behind_parent = true
+offset_left = -15.0
+offset_top = -45.0
+offset_right = 60.0
+offset_bottom = -18.0
+scale = Vector2(0.4, 0.4)
+show_percentage = false

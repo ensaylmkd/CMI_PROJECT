@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://58kynu1eepm6"]
+[gd_scene load_steps=16 format=3 uid="uid://58kynu1eepm6"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_wy2s2"]
 [ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="2_dowv7"]
 [ext_resource type="Texture2D" uid="uid://cwqin7afga50w" path="res://graphics/tileset/asset page 1.png" id="3_ivj83"]
 [ext_resource type="Texture2D" uid="uid://euovqup5a1c" path="res://graphics/tileset/page 2.png" id="4_jc2iy"]
+[ext_resource type="PackedScene" uid="uid://ddc3tnsyjatxg" path="res://tower_controller.tscn" id="7_wwqny"]
 
 [sub_resource type="Animation" id="Animation_b4xgt"]
 length = 0.001
@@ -252,8 +253,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1152.0
-offset_right = 12672.0
-offset_bottom = 7776.0
+offset_right = 18432.0
+offset_bottom = 11016.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_yxshp")
@@ -340,14 +341,28 @@ position = Vector2(1152, 310)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtZone"]
 shape = SubResource("RectangleShape2D_s2ltr")
 
-[node name="Tour1" type="Marker2D" parent="."]
-position = Vector2(175, 208)
+[node name="buttons" type="Node2D" parent="."]
 
-[node name="Tour2" type="Marker2D" parent="."]
-position = Vector2(399, 336)
+[node name="Button" parent="buttons" instance=ExtResource("7_wwqny")]
+offset_left = 408.0
+offset_top = 336.0
+offset_right = 416.0
+offset_bottom = 344.0
 
-[node name="Tour3" type="Marker2D" parent="."]
-position = Vector2(639, 543)
+[node name="Button2" parent="buttons" instance=ExtResource("7_wwqny")]
+offset_left = 166.0
+offset_top = 213.0
+offset_right = 174.0
+offset_bottom = 221.0
 
-[node name="Tour4" type="Marker2D" parent="."]
-position = Vector2(943, 352)
+[node name="Button3" parent="buttons" instance=ExtResource("7_wwqny")]
+offset_left = 635.0
+offset_top = 541.0
+offset_right = 643.0
+offset_bottom = 549.0
+
+[node name="Button4" parent="buttons" instance=ExtResource("7_wwqny")]
+offset_left = 942.0
+offset_top = 352.0
+offset_right = 950.0
+offset_bottom = 360.0
