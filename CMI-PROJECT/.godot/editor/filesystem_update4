@@ -1,7 +1,2 @@
-res://control.tscn
-res://pause.tscn
-res://level.tscn
-res://bullet.tscn
 res://tourDraft.tscn
-res://tour.gd
-res://bullet.gd
+res://bullet.tscn

@@ -1,19 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714645799
-bullet.gd::GDScript::-1::1713172806::0::1::::<>Node2D<>::
-bullet.tscn::PackedScene::1659879057920065143::1712655338::0::1::::<><>::res://bullet.gd
+::res://::1714647725
+bullet.gd::GDScript::-1::1714646479::0::1::::<>Node2D<>::
+bullet.tscn::PackedScene::1659879057920065143::1714647208::0::1::::<><>::res://bullet.gd<>uid://k8fjv4uhc4fg::::res://graphics/Tower/bullet.png
 Control.gd::GDScript::-1::1714645759::0::1::::<>Control<>::
-control.tscn::PackedScene::3216485632050801193::1714645799::0::1::::<><>::res://Control.gd
+control.tscn::PackedScene::3216485632050801193::1714646479::0::1::::<><>::res://Control.gd
 draft.tscn::PackedScene::3612944170605048577::1714645759::0::1::::<><>::res://level.gd<>uid://c7ykwcqp5vipy
 enemy.gd::GDScript::-1::1714645759::0::1::::<>PathFollow2D<>::
 enemyDraft.tscn::PackedScene::7069076017780272926::1714645759::0::1::::<><>::res://enemy.gd<>uid://cbdd7hhebmvkh
 icon.svg::CompressedTexture2D::7098298506989628831::1712655178::1714645794::1::::<><>::
 level.gd::GDScript::-1::1714645759::0::1::::<>Node2D<>::
-level.tscn::PackedScene::2174440518892807827::1714645799::0::1::::<><>::res://level.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://c7ykwcqp5vipy::::res://enemyDraft.tscn<>uid://cbdd7hhebmvkh::::res://graphics/testing_plan.png<>uid://cwqin7afga50w::::res://graphics/tileset/asset page 1.png<>uid://euovqup5a1c::::res://graphics/tileset/page 2.png<>uid://mtnooanifrgb::::res://pause.tscn<>uid://ddc3tnsyjatxg::::res://tower_controller.tscn
+level.tscn::PackedScene::2174440518892807827::1714646479::0::1::::<><>::res://level.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://c7ykwcqp5vipy::::res://enemyDraft.tscn<>uid://cbdd7hhebmvkh::::res://graphics/testing_plan.png<>uid://cwqin7afga50w::::res://graphics/tileset/asset page 1.png<>uid://euovqup5a1c::::res://graphics/tileset/page 2.png<>uid://mtnooanifrgb::::res://pause.tscn<>uid://ddc3tnsyjatxg::::res://tower_controller.tscn
 pause.gd::GDScript::-1::1714645759::0::1::::<>Control<>::
-pause.tscn::PackedScene::882304358932626521::1714645799::0::1::::<><>::res://pause.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf
-tour.gd::GDScript::-1::1714645759::0::1::::<>StaticBody2D<>::
-tourDraft.tscn::PackedScene::3267110970931736600::1714645759::0::1::::<><>::res://tour.gd<>uid://bqt8nmhrp1ro6
+pause.tscn::PackedScene::882304358932626521::1714646479::0::1::::<><>::res://pause.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf
+tour.gd::GDScript::-1::1714647208::0::1::::<>StaticBody2D<>::
+tourDraft.tscn::PackedScene::3267110970931736600::1714647208::0::1::::<><>::res://tour.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://bwmmfi22tmiv0::::res://graphics/Tower/towerbase.png
 tower_controller.gd::GDScript::-1::1714645759::0::1::::<>Button<>::
 tower_controller.tscn::PackedScene::7375692055095705200::1713183951::0::1::::<><>::res://tower_controller.gd<>uid://c8ep664wfdhtv
 ::res://graphics/::1714646050
@@ -139,7 +139,7 @@ spr_StrikerSlash_stripWithEffect.png::CompressedTexture2D::811638552384510375::1
 ::res://graphics/tileset/::1712655338
 asset page 1.png::CompressedTexture2D::6350536603733201632::1712655338::1712655338::1::::<><>::
 page 2.png::CompressedTexture2D::9497980623394134::1712655338::1712655338::1::::<><>::
-::res://graphics/Tower/::1714646094
+::res://graphics/Tower/::1714646098
 bullet.png::CompressedTexture2D::770333708081129060::1714645994::1714646098::1::::<><>::
 towerbase.png::CompressedTexture2D::3956085772810401715::1714646006::1714646098::1::::<><>::
 ::res://graphics/ui/::1712655338
