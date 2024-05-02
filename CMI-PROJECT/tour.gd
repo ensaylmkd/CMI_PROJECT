@@ -5,6 +5,7 @@ extends StaticBody2D
 @onready var area_range = $Area2D/ShootArea 
 @onready var level = self.get_node("/root/Level") #REMPLACER DRAFT PAR LEVEL UNE FOIS LE PROJET FINI
 @onready var upgrade_control = $upgrader_sys/upgrade_control
+@onready var label_cost = $upgrader_sys/upgrade_control/upgrade_cost
 @onready var label_damage = $upgrader_sys/upgrade_control/upgrade_damage/button_visual/Label
 @onready var label_speed = $upgrader_sys/upgrade_control/upgrade_firerate/button_visual/Label
 @onready var label_range = $upgrader_sys/upgrade_control/upgrade_range/button_visual/Label
@@ -30,7 +31,6 @@ func _ready():
 func _process(delta):
 	if enemy_in :
 		enemy_target = enemy_in[0]
-		tower.look_at(enemy_target.global_position)
 		if time.is_stopped():
 			shoot_the_target(enemy_target)
 			time.start()
@@ -62,6 +62,7 @@ func reset_bullets():
 # //////////// boutons d'upgrades /////////////////
 func _on_upgrade_notifier_pressed():
 	upgrade_control.visible = true
+	label_cost.text="cost: "+str(next_upgrade)
 	await upgraded 
 	upgrade_control.visible = false
 
@@ -71,7 +72,7 @@ func _on_upgrade_damage_pressed():
 	lvl_damage += 1
 	label_damage.text ="damage: lvl "+str(lvl_damage)
 	damage += 5
-	level.gold -= next_upgrade
+	level.add_gold(-next_upgrade)
 	next_upgrade += 10
 	
 func _on_upgrade_firerate_pressed():
@@ -80,7 +81,7 @@ func _on_upgrade_firerate_pressed():
 	lvl_firerate += 1
 	label_speed.text ="speed: lvl "+str(lvl_firerate)
 	time.wait_time -=0.3 
-	level.gold -= next_upgrade
+	level.add_gold(-next_upgrade)
 	next_upgrade += 10
 	
 func _on_upgrade_range_pressed():
@@ -89,7 +90,7 @@ func _on_upgrade_range_pressed():
 	lvl_range += 1
 	label_range.text ="range: lvl "+str(lvl_range)
 	area_range.shape.radius += 20
-	level.gold -= next_upgrade
+	level.add_gold(-next_upgrade)
 	next_upgrade += 10
 
 func _on_upgrade_cancel_pressed():

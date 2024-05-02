@@ -1,8 +1,9 @@
+Label
+CollisionShape2D
 Button
 ProgressBar
 Node2D
 Panel
-Label
 Control
 VBoxContainer
 TextureRect

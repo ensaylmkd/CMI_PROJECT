@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://xwb73g4nqt64"]
+[gd_scene load_steps=4 format=3 uid="uid://xwb73g4nqt64"]
 
 [ext_resource type="Script" path="res://bullet.gd" id="1_7hcp3"]
+[ext_resource type="Texture2D" uid="uid://k8fjv4uhc4fg" path="res://graphics/Tower/bullet.png" id="2_8n45q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y3f5c"]
+radius = 7.0
 
 [node name="bullet" type="Node2D"]
 script = ExtResource("1_7hcp3")
@@ -9,12 +13,11 @@ script = ExtResource("1_7hcp3")
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(-14, -4, 0, -4, 14, 0, 0, 4, -14, 4)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_y3f5c")
 
-[node name="bulletbody" type="Polygon2D" parent="."]
-scale = Vector2(0.577088, 0.400547)
-color = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-24.2597, -9.98635, 0, -9.98635, 24, 0, 24, 0, 0, 9.98635, -24.2597, 9.98635)
+[node name="Bullet" type="Sprite2D" parent="."]
+scale = Vector2(1.5625, 1.5625)
+texture = ExtResource("2_8n45q")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
