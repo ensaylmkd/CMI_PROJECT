@@ -1,22 +1,22 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714648147
-bullet.gd::GDScript::-1::1714648130::0::1::::<>Node2D<>::
-bullet.tscn::PackedScene::1659879057920065143::1714648130::0::1::::<><>::res://bullet.gd<>uid://k8fjv4uhc4fg::::res://graphics/Tower/bullet.png
+::res://::1714736619
+bullet.gd::GDScript::-1::1714648713::0::1::::<>Node2D<>::
+bullet.tscn::PackedScene::1659879057920065143::1714735939::0::1::::<><>::res://bullet.gd<>uid://k8fjv4uhc4fg::::res://graphics/Tower/bullet.png
 Control.gd::GDScript::-1::1714648067::0::1::::<>Control<>::
-control.tscn::PackedScene::3216485632050801193::1714648130::0::1::::<><>::res://Control.gd
-draft.tscn::PackedScene::3612944170605048577::1714648067::0::1::::<><>::res://level.gd<>uid://c7ykwcqp5vipy::::res://enemyDraft.tscn<>uid://ddc3tnsyjatxg::::res://tower_controller.tscn
+control.tscn::PackedScene::3216485632050801193::1714648713::0::1::::<><>::res://Control.gd
+draft.tscn::PackedScene::3612944170605048577::1714648067::0::1::::<><>::res://level.gd<>uid://c7ykwcqp5vipy
 enemy.gd::GDScript::-1::1714648067::0::1::::<>PathFollow2D<>::
-enemyDraft.tscn::PackedScene::7069076017780272926::1714648067::0::1::::<><>::res://enemy.gd<>uid://cbdd7hhebmvkh::::res://graphics/testing_plan.png<>uid://bgw8x4xxu5sef::::res://graphics/ennemies/stormtrooper/FO Stormtrooper B.png<>uid://c7jly41aivamp::::res://graphics/ennemies/stormtrooper/Imperial Crew.png<>uid://ckixmuqmnpjsg::::res://graphics/ennemies/stormtrooper/Sith Jet Trooper.png<>uid://cmh4eafkuhcuf::::res://graphics/ennemies/drones/1 Drones/3/Idle.png<>uid://bsfc7t8mkwkhh::::res://graphics/ennemies/striker/spr_StrikerRun_strip.png
+enemyDraft.tscn::PackedScene::7069076017780272926::1714735939::0::1::::<><>::res://enemy.gd<>uid://cbdd7hhebmvkh::::res://graphics/testing_plan.png<>uid://bgw8x4xxu5sef::::res://graphics/ennemies/stormtrooper/FO Stormtrooper B.png<>uid://c7jly41aivamp::::res://graphics/ennemies/stormtrooper/Imperial Crew.png<>uid://ckixmuqmnpjsg::::res://graphics/ennemies/stormtrooper/Sith Jet Trooper.png<>uid://cmh4eafkuhcuf::::res://graphics/ennemies/drones/1 Drones/3/Idle.png<>uid://bsfc7t8mkwkhh::::res://graphics/ennemies/striker/spr_StrikerRun_strip.png
 icon.svg::CompressedTexture2D::7098298506989628831::1712655178::1714648091::1::::<><>::
 level.gd::GDScript::-1::1714648067::0::1::::<>Node2D<>::
-level.tscn::PackedScene::2174440518892807827::1714648130::0::1::::<><>::res://level.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://c7ykwcqp5vipy::::res://enemyDraft.tscn<>uid://cbdd7hhebmvkh::::res://graphics/testing_plan.png<>uid://cwqin7afga50w::::res://graphics/tileset/asset page 1.png<>uid://euovqup5a1c::::res://graphics/tileset/page 2.png<>uid://mtnooanifrgb::::res://pause.tscn<>uid://ddc3tnsyjatxg::::res://tower_controller.tscn
+level.tscn::PackedScene::2174440518892807827::1714735939::0::1::::<><>::res://level.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://c7ykwcqp5vipy::::res://enemyDraft.tscn<>uid://cbdd7hhebmvkh::::res://graphics/testing_plan.png<>uid://cwqin7afga50w::::res://graphics/tileset/asset page 1.png<>uid://euovqup5a1c::::res://graphics/tileset/page 2.png<>uid://mtnooanifrgb::::res://pause.tscn<>uid://ddc3tnsyjatxg::::res://tower_controller.tscn
 pause.gd::GDScript::-1::1714648067::0::1::::<>Control<>::
-pause.tscn::PackedScene::882304358932626521::1714648067::0::1::::<><>::res://pause.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf
-tour.gd::GDScript::-1::1714648130::0::1::::<>StaticBody2D<>::
-tourDraft.tscn::PackedScene::3267110970931736600::1714648130::0::1::::<><>::res://tour.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://bwmmfi22tmiv0::::res://graphics/Tower/towerbase.png
+pause.tscn::PackedScene::882304358932626521::1714648067::0::1::::<><>::res://pause.gd<>uid://bqt8nmhrp1ro6
+tour.gd::GDScript::-1::1714735939::0::1::::<>StaticBody2D<>::
+tourDraft.tscn::PackedScene::3267110970931736600::1714736114::0::1::::<><>::res://tour.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://bwmmfi22tmiv0::::res://graphics/Tower/towerbase.png
 tower_controller.gd::GDScript::-1::1714648067::0::1::::<>Button<>::
 tower_controller.tscn::PackedScene::7375692055095705200::1713183951::0::1::::<><>::res://tower_controller.gd<>uid://c8ep664wfdhtv
-::res://graphics/::1714648130
+::res://graphics/::1714648713
 testing_plan.png::CompressedTexture2D::4849463019330326111::1712655178::1712655178::1::::<><>::
 ::res://graphics/effects/::1712655338
 ::res://graphics/effects/bullets/::1712655338
@@ -139,10 +139,14 @@ spr_StrikerSlash_stripWithEffect.png::CompressedTexture2D::811638552384510375::1
 ::res://graphics/tileset/::1712655338
 asset page 1.png::CompressedTexture2D::6350536603733201632::1712655338::1712655338::1::::<><>::
 page 2.png::CompressedTexture2D::9497980623394134::1712655338::1712655338::1::::<><>::
-::res://graphics/Tower/::1714648130
-bullet.png::CompressedTexture2D::770333708081129060::1714648130::1714648130::1::::<><>::
-towerbase.png::CompressedTexture2D::3956085772810401715::1714648130::1714648130::1::::<><>::
-::res://graphics/ui/::1712655338
+::res://graphics/Tower/::1714736753
+bullet.png::CompressedTexture2D::770333708081129060::1714648713::1714648713::1::::<><>::
+bullet_damage.png::CompressedTexture2D::3570213340680308824::1714732330::1714732371::1::::<><>::
+towerbase.png::CompressedTexture2D::3956085772810401715::1714648713::1714648713::1::::<><>::
+towerdamage.png::CompressedTexture2D::4830340527134448878::1714732310::1714732371::1::::<><>::
+towerrange.png::CompressedTexture2D::5632180521975890589::1714736753::1714736753::1::::<><>::
+towerspeed.png::CompressedTexture2D::1785236164899417571::1714734999::1714735021::1::::<><>::
+::res://graphics/ui/::1714732341
 00.png::CompressedTexture2D::7896896591240174176::1712655338::1712655338::1::::<><>::
 01.png::CompressedTexture2D::9131411926954189429::1712655338::1712655338::1::::<><>::
 02.png::CompressedTexture2D::5034447379277487595::1712655338::1712655338::1::::<><>::
@@ -152,6 +156,7 @@ towerbase.png::CompressedTexture2D::3956085772810401715::1714648130::1714648130:
 06.png::CompressedTexture2D::730489189833404189::1712655338::1712655338::1::::<><>::
 07.png::CompressedTexture2D::6129226025621110565::1712655338::1712655338::1::::<><>::
 All.png::CompressedTexture2D::8468960297086483039::1712655338::1712655338::1::::<><>::
+towerdamage.png::CompressedTexture2D::6404202389796736396::1714732341::1714732341::1::::<><>::
 ::res://graphics/ui/font/::1712655338
 ::res://graphics/ui/font/TepidTerminalFont_v231106/::1712655338
 license.txt::TextFile::-1::1712655338::0::1::::<><>::

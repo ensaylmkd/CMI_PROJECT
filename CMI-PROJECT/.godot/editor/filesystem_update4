@@ -1,2 +1,5 @@
 res://tourDraft.tscn
+res://tour.gd
 res://bullet.tscn
+res://enemyDraft.tscn
+res://level.tscn

@@ -4,21 +4,31 @@ extends StaticBody2D
 @onready var tower = $Towershape
 @onready var area_range = $Area2D/ShootArea 
 @onready var level = self.get_node("/root/Level") #REMPLACER DRAFT PAR LEVEL UNE FOIS LE PROJET FINI
+
 @onready var upgrade_control = $upgrader_sys/upgrade_control
 @onready var label_cost = $upgrader_sys/upgrade_control/upgrade_cost
+
 @onready var label_damage = $upgrader_sys/upgrade_control/upgrade_damage/button_visual/Label
+@onready var button_damage = $upgrader_sys/upgrade_control/upgrade_damage/button_visual/upgrade_damage
+
 @onready var label_speed = $upgrader_sys/upgrade_control/upgrade_firerate/button_visual/Label
+@onready var button_speed = $upgrader_sys/upgrade_control/upgrade_firerate/button_visual/upgrade_firerate
+
 @onready var label_range = $upgrader_sys/upgrade_control/upgrade_range/button_visual/Label
+@onready var button_range = $upgrader_sys/upgrade_control/upgrade_range/button_visual/upgrade_range
+
 
 var enemy_in = []
 var enemy_target
 
 var damage
 
+
 var lvl_damage = 1
 var lvl_firerate = 1
 var lvl_range = 1
 
+var big_upgraded = false
 var created = false
 var next_upgrade = 30
 signal upgraded
@@ -63,35 +73,75 @@ func reset_bullets():
 func _on_upgrade_notifier_pressed():
 	upgrade_control.visible = true
 	label_cost.text="cost: "+str(next_upgrade)
-	await upgraded 
+	await upgraded
 	upgrade_control.visible = false
 
 func _on_upgrade_damage_pressed():
 	emit_signal("upgraded")
 	
-	lvl_damage += 1
-	label_damage.text ="damage: lvl "+str(lvl_damage)
-	damage += 5
+	if lvl_damage < 4 :	
+		lvl_damage += 1
+		label_damage.text ="damage: lvl "+str(lvl_damage)
+		damage += 5
+	else:
+		if not big_upgraded :
+			$Towerbase.texture = load("res://graphics/Tower/towerdamage.png")	
+			damage += 20
+			big_upgraded = true
+		label_damage.text ="damage: lvl MAX"
+		button_damage.visible = false
+		
 	level.add_gold(-next_upgrade)
 	next_upgrade += 10
+	
+		
 	
 func _on_upgrade_firerate_pressed():
 	emit_signal("upgraded")
 	
-	lvl_firerate += 1
-	label_speed.text ="speed: lvl "+str(lvl_firerate)
-	time.wait_time -=0.3 
+	if lvl_firerate < 4 :	
+		lvl_firerate += 1
+		label_speed.text ="speed: lvl "+str(lvl_firerate)
+		time.wait_time -= 0.2
+	else:
+		if not big_upgraded :
+			$Towerbase.texture = load("res://graphics/Tower/towerspeed.png")	
+			time.wait_time = 0.4
+			big_upgraded = true	
+		label_speed.text ="speed: lvl MAX"
+		button_speed.visible = false
+	
 	level.add_gold(-next_upgrade)
 	next_upgrade += 10
+	
+#	lvl_firerate += 1
+#	label_speed.text ="speed: lvl "+str(lvl_firerate)
+#	time.wait_time -=0.3 
+#	level.add_gold(-next_upgrade)
+#	next_upgrade += 10
 	
 func _on_upgrade_range_pressed():
 	emit_signal("upgraded")
 	
-	lvl_range += 1
-	label_range.text ="range: lvl "+str(lvl_range)
-	area_range.shape.radius += 20
+	if lvl_range < 4 :	
+		lvl_range += 1
+		label_range.text ="range: lvl "+str(lvl_range)
+		area_range.shape.radius += 20
+	else:
+		if not big_upgraded : 
+			$Towerbase.texture = load("res://graphics/Tower/towerrange.png")
+			area_range.shape.radius += 200
+			big_upgraded = true	
+		label_range.text ="range: lvl MAX"
+		button_range.visible = false
+	
 	level.add_gold(-next_upgrade)
 	next_upgrade += 10
+#	lvl_range += 1
+#	label_range.text ="range: lvl "+str(lvl_range)
+#	area_range.shape.radius += 20
+#	level.add_gold(-next_upgrade)
+#	next_upgrade += 10
 
 func _on_upgrade_cancel_pressed():
 	emit_signal("upgraded")
