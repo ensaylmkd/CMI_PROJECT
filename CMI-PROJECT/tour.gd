@@ -20,10 +20,11 @@ extends StaticBody2D
 
 var enemy_in = []
 var enemy_target
-
+var type_bullet = 0
+ 
 var damage
 
-
+var lvl_counter = 1
 var lvl_damage = 1
 var lvl_firerate = 1
 var lvl_range = 1
@@ -44,8 +45,11 @@ func _process(delta):
 		if time.is_stopped():
 			shoot_the_target(enemy_target)
 			time.start()
+	if lvl_counter < 13:
+		$upgrader_sys/upgrade_notifier.visible = next_upgrade <= level.gold
+	else:
+		$upgrader_sys/upgrade_notifier.visible = false
 	
-	$upgrader_sys/upgrade_notifier.visible = next_upgrade <= level.gold 
 	
 #////////////// detection des ennemies//////////////////
 func _on_area_2d_area_entered(area):
@@ -61,6 +65,7 @@ func shoot_the_target(area):
 	var bullet = bullet_scene.instantiate()
 	bullet.target = enemy_target
 	bullet.damage = damage
+	bullet.bullet_type = type_bullet 
 	$bullets.add_child(bullet)
 
 #//////////// opti sys ///////////////
@@ -88,13 +93,13 @@ func _on_upgrade_damage_pressed():
 			$Towerbase.texture = load("res://graphics/Tower/towerdamage.png")	
 			damage += 20
 			big_upgraded = true
+			type_bullet = 1
 		label_damage.text ="damage: lvl MAX"
 		button_damage.visible = false
 		
 	level.add_gold(-next_upgrade)
-	next_upgrade += 10
-	
-		
+	lvl_counter += 1
+	next_upgrade += int(lvl_counter * 11)
 	
 func _on_upgrade_firerate_pressed():
 	emit_signal("upgraded")
@@ -107,13 +112,14 @@ func _on_upgrade_firerate_pressed():
 		if not big_upgraded :
 			$Towerbase.texture = load("res://graphics/Tower/towerspeed.png")	
 			time.wait_time = 0.4
-			big_upgraded = true	
+			big_upgraded = true
+			type_bullet = 2	
 		label_speed.text ="speed: lvl MAX"
 		button_speed.visible = false
 	
 	level.add_gold(-next_upgrade)
-	next_upgrade += 10
-	
+	lvl_counter += 1
+	next_upgrade += int(lvl_counter * 10)
 	
 func _on_upgrade_range_pressed():
 	emit_signal("upgraded")
@@ -126,12 +132,15 @@ func _on_upgrade_range_pressed():
 		if not big_upgraded : 
 			$Towerbase.texture = load("res://graphics/Tower/towerrange.png")
 			area_range.shape.radius += 200
-			big_upgraded = true	
+			big_upgraded = true
+			type_bullet = 3
 		label_range.text ="range: lvl MAX"
 		button_range.visible = false
 	
 	level.add_gold(-next_upgrade)
-	next_upgrade += 10
+	lvl_counter += 1
+	next_upgrade += int(lvl_counter*10)
+	print(lvl_counter)
 
 
 func _on_upgrade_cancel_pressed():

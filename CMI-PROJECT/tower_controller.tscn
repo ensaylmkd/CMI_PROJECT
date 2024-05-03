@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ddc3tnsyjatxg"]
 
 [ext_resource type="Script" path="res://tower_controller.gd" id="1_n7hoa"]
-[ext_resource type="Texture2D" uid="uid://c8ep664wfdhtv" path="res://icon.svg" id="2_a76v3"]
+[ext_resource type="Texture2D" uid="uid://dprhn15n2ywhw" path="res://graphics/ui/coin.png" id="2_vrvb8"]
 
 [node name="Button" type="Button"]
 flat = true
@@ -27,7 +27,7 @@ alignment = 1
 [node name="TextureRect" type="TextureRect" parent="button_visual"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-texture = ExtResource("2_a76v3")
+texture = ExtResource("2_vrvb8")
 expand_mode = 1
 stretch_mode = 5
 
