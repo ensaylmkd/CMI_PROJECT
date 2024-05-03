@@ -39,7 +39,7 @@ func _process(_delta):
 		next_wave()
 
 func next_wave():
-	$Interface/Label.text = "WAVE" + str(wave+1)
+	$Interface/Label.text = "WAVE " + str(wave+1)
 	$Interface/Label/AnimationPlayer.play("new_wave")
 	await not $Interface/Label/AnimationPlayer.is_playing()
 	await get_tree().create_timer(1).timeout
@@ -52,9 +52,8 @@ func next_wave():
 func retriver_wave_data():
 	var wave_data = []
 	var lvl_enemy_max = nb_enemies%5
-	
 	for i in range(nb_enemies):
-		wave_data.append(["enemy", randf_range(0.2,0.5), randi_range(0,lvl_enemy_max)])
+		wave_data.append(["enemy", randf_range(0.2,0.5), randi_range(0, lvl_enemy_max)])
 	wave += 1
 	return wave_data
 

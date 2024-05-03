@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://euovqup5a1c" path="res://graphics/tileset/page 2.png" id="4_jc2iy"]
 [ext_resource type="Texture2D" uid="uid://dprhn15n2ywhw" path="res://graphics/ui/coin.png" id="5_0lmqf"]
 [ext_resource type="PackedScene" uid="uid://dxl3sxky4o1ln" path="res://busted.tscn" id="6_6nndd"]
-[ext_resource type="Texture2D" path="res://graphics/ui/tile000.png" id="6_7wupq"]
-[ext_resource type="Texture2D" path="res://graphics/ui/tile001.png" id="7_t8tgo"]
+[ext_resource type="Texture2D" uid="uid://d3h2bae2te0va" path="res://graphics/ui/tile000.png" id="6_7wupq"]
+[ext_resource type="Texture2D" uid="uid://b1ocac7m8fq5x" path="res://graphics/ui/tile001.png" id="7_t8tgo"]
 [ext_resource type="PackedScene" uid="uid://ddc3tnsyjatxg" path="res://tower_controller.tscn" id="7_wwqny"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sj31k"]
@@ -342,8 +342,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1152.0
-offset_right = 1152.0
-offset_bottom = 1296.0
+offset_right = -1144.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_yxshp")

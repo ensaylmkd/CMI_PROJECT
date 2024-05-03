@@ -2,10 +2,6 @@ res://tourDraft.tscn
 res://pausemenu.gdshader
 res://bullet.tscn
 res://level.tscn
-res://pausemenu.tscn
-res://enemyDraft.tscn
-res://busted.tscn
-res://level.gd
-res://bullet.gd
-res://tour.gd
 res://tower_controller.tscn
+res://level.gd
+res://enemyDraft.tscn
