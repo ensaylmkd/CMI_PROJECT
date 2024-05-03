@@ -32,14 +32,18 @@ func _process(delta):
 	if self.get_node("Path2D").get_children(false) == [] and started:
 		started = false
 		
-		for sc in ["PosTow1", "PosTow2", "PosTow3"]:
-			for i in self.get_node(sc + "/tower/bullets").get_children(false):
-				i.queue_free()
+#		for sc in ["PosTow1", "PosTow2", "PosTow3"]:
+#			for i in self.get_node(sc + "/tower/bullets").get_children(false):
+#				i.queue_free()
 		
 		await get_tree().create_timer(2).timeout
 		next_wave()
 
 func next_wave():
+	print(wave)
+	$Interface/Label.text = "WAVE " + str(wave+1)
+	$Interface/Label/AnimationPlayer.play("new_wave")
+	await not $Interface/Label/AnimationPlayer.is_playing()
 	await get_tree().create_timer(1).timeout
 	nb_enemies += 6
 	var wave_data = retriver_wave_data()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://58kynu1eepm6"]
+[gd_scene load_steps=16 format=3 uid="uid://58kynu1eepm6"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_wy2s2"]
 [ext_resource type="FontFile" uid="uid://cvjs5msog0vje" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="2_dowv7"]
 [ext_resource type="Texture2D" uid="uid://cwqin7afga50w" path="res://graphics/tileset/asset page 1.png" id="3_ivj83"]
 [ext_resource type="Texture2D" uid="uid://euovqup5a1c" path="res://graphics/tileset/page 2.png" id="4_jc2iy"]
+[ext_resource type="PackedScene" uid="uid://cccrusw4xahl3" path="res://pausemenu.tscn" id="5_r44ay"]
 
 [sub_resource type="Animation" id="Animation_b4xgt"]
 length = 0.001
@@ -252,8 +253,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1152.0
-offset_right = 3456.0
-offset_bottom = 2592.0
+offset_right = -1152.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_yxshp")
@@ -296,6 +296,9 @@ theme_override_fonts/font = ExtResource("1_yxshp")
 theme_override_font_sizes/font_size = 30
 text = "000"
 vertical_alignment = 2
+
+[node name="pausemenu" parent="Interface" instance=ExtResource("5_r44ay")]
+layout_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 z_as_relative = false

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tw2d158rikik"
+path="res://.godot/imported/Game Over.mp3-0ff3341e8507cd4ee23c3e27d11effe6.mp3str"
+
+[deps]
+
+source_file="res://sounds/sfx/shoot/Misc Lasers/Game Over.mp3"
+dest_files=["res://.godot/imported/Game Over.mp3-0ff3341e8507cd4ee23c3e27d11effe6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
