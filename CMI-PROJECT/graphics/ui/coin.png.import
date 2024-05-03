@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxiijpaq4bukq"
-path="res://.godot/imported/towerdamage.png-1cef91c4831ae253f4cce77ec88dbb56.ctex"
+uid="uid://dprhn15n2ywhw"
+path="res://.godot/imported/coin.png-fac7d958bb1a326e8dfebcc7c1113824.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/ui/towerdamage.png"
-dest_files=["res://.godot/imported/towerdamage.png-1cef91c4831ae253f4cce77ec88dbb56.ctex"]
+source_file="res://graphics/ui/coin.png"
+dest_files=["res://.godot/imported/coin.png-fac7d958bb1a326e8dfebcc7c1113824.ctex"]
 
 [params]
 

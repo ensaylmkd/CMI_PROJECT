@@ -1,10 +1,14 @@
+TextureRect
+AnimationPlayer
 Label
+AnimatedSprite2D
+Node2D
+Node
+HBoxContainer
 CollisionShape2D
 Button
 ProgressBar
-Node2D
 Panel
 Control
 VBoxContainer
-TextureRect
 Marker2D

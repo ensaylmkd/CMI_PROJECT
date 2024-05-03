@@ -1,5 +1,8 @@
 res://tourDraft.tscn
-res://tour.gd
+res://pausemenu.gdshader
 res://bullet.tscn
-res://enemyDraft.tscn
 res://level.tscn
+res://pausemenu.tscn
+res://enemyDraft.tscn
+res://busted.tscn
+res://tour.gd

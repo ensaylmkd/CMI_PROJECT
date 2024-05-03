@@ -1,260 +1,262 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714736619
-bullet.gd::GDScript::-1::1714648713::0::1::::<>Node2D<>::
-bullet.tscn::PackedScene::1659879057920065143::1714735939::0::1::::<><>::res://bullet.gd<>uid://k8fjv4uhc4fg::::res://graphics/Tower/bullet.png
-Control.gd::GDScript::-1::1714648067::0::1::::<>Control<>::
-control.tscn::PackedScene::3216485632050801193::1714648713::0::1::::<><>::res://Control.gd
-draft.tscn::PackedScene::3612944170605048577::1714648067::0::1::::<><>::res://level.gd<>uid://c7ykwcqp5vipy
-enemy.gd::GDScript::-1::1714648067::0::1::::<>PathFollow2D<>::
-enemyDraft.tscn::PackedScene::7069076017780272926::1714735939::0::1::::<><>::res://enemy.gd<>uid://cbdd7hhebmvkh::::res://graphics/testing_plan.png<>uid://bgw8x4xxu5sef::::res://graphics/ennemies/stormtrooper/FO Stormtrooper B.png<>uid://c7jly41aivamp::::res://graphics/ennemies/stormtrooper/Imperial Crew.png<>uid://ckixmuqmnpjsg::::res://graphics/ennemies/stormtrooper/Sith Jet Trooper.png<>uid://cmh4eafkuhcuf::::res://graphics/ennemies/drones/1 Drones/3/Idle.png<>uid://bsfc7t8mkwkhh::::res://graphics/ennemies/striker/spr_StrikerRun_strip.png
-icon.svg::CompressedTexture2D::7098298506989628831::1712655178::1714648091::1::::<><>::
-level.gd::GDScript::-1::1714648067::0::1::::<>Node2D<>::
-level.tscn::PackedScene::2174440518892807827::1714735939::0::1::::<><>::res://level.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://c7ykwcqp5vipy::::res://enemyDraft.tscn<>uid://cbdd7hhebmvkh::::res://graphics/testing_plan.png<>uid://cwqin7afga50w::::res://graphics/tileset/asset page 1.png<>uid://euovqup5a1c::::res://graphics/tileset/page 2.png<>uid://mtnooanifrgb::::res://pause.tscn<>uid://ddc3tnsyjatxg::::res://tower_controller.tscn
-pause.gd::GDScript::-1::1714648067::0::1::::<>Control<>::
-pause.tscn::PackedScene::882304358932626521::1714648067::0::1::::<><>::res://pause.gd<>uid://bqt8nmhrp1ro6
-tour.gd::GDScript::-1::1714735939::0::1::::<>StaticBody2D<>::
-tourDraft.tscn::PackedScene::3267110970931736600::1714736114::0::1::::<><>::res://tour.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://bwmmfi22tmiv0::::res://graphics/Tower/towerbase.png
-tower_controller.gd::GDScript::-1::1714648067::0::1::::<>Button<>::
-tower_controller.tscn::PackedScene::7375692055095705200::1713183951::0::1::::<><>::res://tower_controller.gd<>uid://c8ep664wfdhtv
-::res://graphics/::1714648713
-testing_plan.png::CompressedTexture2D::4849463019330326111::1712655178::1712655178::1::::<><>::
-::res://graphics/effects/::1712655338
-::res://graphics/effects/bullets/::1712655338
-All_Fire_Bullet_Pixel_16x16_00.png::CompressedTexture2D::6400058985453026436::1712655338::1712655338::1::::<><>::
-All_Fire_Bullet_Pixel_16x16_01.png::CompressedTexture2D::6008674058304552233::1712655338::1712655338::1::::<><>::
-All_Fire_Bullet_Pixel_16x16_02.png::CompressedTexture2D::1737842383234591856::1712655338::1712655338::1::::<><>::
-All_Fire_Bullet_Pixel_16x16_03.png::CompressedTexture2D::3406211703490477596::1712655338::1712655338::1::::<><>::
-All_Fire_Bullet_Pixel_16x16_04.png::CompressedTexture2D::2460415204054275545::1712655338::1712655338::1::::<><>::
-All_Fire_Bullet_Pixel_16x16_05.png::CompressedTexture2D::4759455682626763537::1712655338::1712655338::1::::<><>::
-All_Fire_Bullet_Pixel_16x16_06.png::CompressedTexture2D::4898343745079266875::1712655338::1712655338::1::::<><>::
-All_Fire_Bullet_Pixel_16x16_07.png::CompressedTexture2D::3075274573383114532::1712655338::1712655338::1::::<><>::
-::res://graphics/effects/fire/::1712655338
-guide.png::CompressedTexture2D::3960907071823232093::1712655338::1712655338::1::::<><>::
-readme.TXT::TextFile::-1::1712655338::0::1::::<><>::
-::res://graphics/effects/fire/png/::1712655338
-::res://graphics/effects/fire/png/blue/::1712655338
-burning_loop_1.png::CompressedTexture2D::7968049808948038652::1712655338::1712655338::1::::<><>::
-burning_loop_2.png::CompressedTexture2D::1936495552530996042::1712655338::1712655338::1::::<><>::
-burning_loop_3.png::CompressedTexture2D::7788078883425356051::1712655338::1712655338::1::::<><>::
-burning_loop_4.png::CompressedTexture2D::228050540082652544::1712655338::1712655338::1::::<><>::
-burning_loop_5.png::CompressedTexture2D::828813818692737395::1712655338::1712655338::1::::<><>::
-::res://graphics/effects/fire/png/green/::1712655338
-burning_loop_1.png::CompressedTexture2D::2733344812836460519::1712655338::1712655338::1::::<><>::
-burning_loop_2.png::CompressedTexture2D::1487667737069867590::1712655338::1712655338::1::::<><>::
-burning_loop_3.png::CompressedTexture2D::1986412133551925711::1712655338::1712655338::1::::<><>::
-burning_loop_4.png::CompressedTexture2D::1228294069142843830::1712655338::1712655338::1::::<><>::
-burning_loop_5.png::CompressedTexture2D::341543680284341180::1712655338::1712655338::1::::<><>::
-::res://graphics/effects/fire/png/orange/::1712655338
-burning_loop_1.png::CompressedTexture2D::498240627359697138::1712655338::1712655338::1::::<><>::
-burning_loop_2.png::CompressedTexture2D::1396548616560990719::1712655338::1712655338::1::::<><>::
-burning_loop_3.png::CompressedTexture2D::5432063212203927356::1712655338::1712655338::1::::<><>::
-burning_loop_4.png::CompressedTexture2D::4554974285398103980::1712655338::1712655338::1::::<><>::
-burning_loop_5.png::CompressedTexture2D::1833028771393904554::1712655338::1712655338::1::::<><>::
-::res://graphics/effects/fire/png/purple/::1712655338
-burning_loop_1.png::CompressedTexture2D::3502110698792791981::1712655338::1712655338::1::::<><>::
-burning_loop_2.png::CompressedTexture2D::3972022360735357448::1712655338::1712655338::1::::<><>::
-burning_loop_3.png::CompressedTexture2D::7829025872310621127::1712655338::1712655338::1::::<><>::
-burning_loop_4.png::CompressedTexture2D::5323717889677128524::1712655338::1712655338::1::::<><>::
-burning_loop_5.png::CompressedTexture2D::6013431425086029558::1712655338::1712655338::1::::<><>::
-::res://graphics/effects/fire/png/white/::1712655338
-burning_loop_1.png::CompressedTexture2D::8540283998192976219::1712655338::1712655338::1::::<><>::
-burning_loop_2.png::CompressedTexture2D::204082521041493363::1712655338::1712655338::1::::<><>::
-burning_loop_3.png::CompressedTexture2D::4293160411512854524::1712655338::1712655338::1::::<><>::
-burning_loop_4.png::CompressedTexture2D::8478675755422035487::1712655338::1712655338::1::::<><>::
-burning_loop_5.png::CompressedTexture2D::8183170295757108706::1712655338::1712655338::1::::<><>::
-::res://graphics/ennemies/::1712655338
-::res://graphics/ennemies/drones/::1712655338
-license.txt::TextFile::-1::1712655338::0::1::::<><>::
-::res://graphics/ennemies/drones/1 Drones/::1712655338
-::res://graphics/ennemies/drones/1 Drones/1/::1712655338
-Death.png::CompressedTexture2D::4770228291419046421::1712655338::1712655338::1::::<><>::
-Idle.png::CompressedTexture2D::5370892105570942667::1712655338::1712655338::1::::<><>::
-Scan.png::CompressedTexture2D::2748664648936338842::1712655338::1712655338::1::::<><>::
-Walk.png::CompressedTexture2D::7825950536016033036::1712655338::1712655338::1::::<><>::
-Walk_scan.png::CompressedTexture2D::7053672802766564767::1712655338::1712655338::1::::<><>::
-::res://graphics/ennemies/drones/1 Drones/2/::1712655338
-Bomb.png::CompressedTexture2D::1409536402321979488::1712655338::1712655338::1::::<><>::
-Drop.png::CompressedTexture2D::941021780357313395::1712655338::1712655338::1::::<><>::
-::res://graphics/ennemies/drones/1 Drones/3/::1712655338
-Back.png::CompressedTexture2D::6955163206856143305::1712655338::1712655338::1::::<><>::
-Death.png::CompressedTexture2D::8434215366906433641::1712655338::1712655338::1::::<><>::
-Fire1.png::CompressedTexture2D::4721946468948320276::1712655338::1712655338::1::::<><>::
-Fire2.png::CompressedTexture2D::2964783843371136371::1712655338::1712655338::1::::<><>::
-Fire3.png::CompressedTexture2D::8721536090967253073::1712655338::1712655338::1::::<><>::
-Forward.png::CompressedTexture2D::7949905192339308083::1712655338::1712655338::1::::<><>::
-Idle.png::CompressedTexture2D::5631326079492237357::1712655338::1712655338::1::::<><>::
-::res://graphics/ennemies/drones/1 Drones/4/::1712655338
-Death.png::CompressedTexture2D::6271574832311362318::1712655338::1712655338::1::::<><>::
-Idle.png::CompressedTexture2D::2260114961026176555::1712655338::1712655338::1::::<><>::
-Landing.png::CompressedTexture2D::5940745669612051284::1712655338::1712655338::1::::<><>::
-Walk.png::CompressedTexture2D::6329380345397012490::1712655338::1712655338::1::::<><>::
-::res://graphics/ennemies/drones/1 Drones/5/::1712655338
-Death.png::CompressedTexture2D::6736887522877384423::1712655338::1712655338::1::::<><>::
-Idle.png::CompressedTexture2D::5767476512282401492::1712655338::1712655338::1::::<><>::
-Walk.png::CompressedTexture2D::6109856105610254557::1712655338::1712655338::1::::<><>::
-::res://graphics/ennemies/drones/1 Drones/5_2/::1712655338
-Death.png::CompressedTexture2D::520849278843227396::1712655338::1712655338::1::::<><>::
-Idle.png::CompressedTexture2D::1671983150211295559::1712655338::1712655338::1::::<><>::
-Walk.png::CompressedTexture2D::372249195972869984::1712655338::1712655338::1::::<><>::
-::res://graphics/ennemies/drones/1 Drones/6/::1712655338
-Capsule.png::CompressedTexture2D::8589838640498036699::1712655338::1712655338::1::::<><>::
-Drop.png::CompressedTexture2D::378235769632216256::1712655338::1712655338::1::::<><>::
-Walk2.png::CompressedTexture2D::1443296304037033567::1712655338::1712655338::1::::<><>::
-Walk.png::CompressedTexture2D::4050914835893321411::1712655338::1712655338::1::::<><>::
-::res://graphics/ennemies/stormtrooper/::1712655338
-Dark Trooper.png::CompressedTexture2D::9104253439044177579::1712655338::1712655338::1::::<><>::
-Fleet Technician.png::CompressedTexture2D::3126780516823028268::1712655338::1712655338::1::::<><>::
-FO Flametrooper.png::CompressedTexture2D::1735946708989742570::1712655338::1712655338::1::::<><>::
-FO Snowtrooper.png::CompressedTexture2D::1287397301287129641::1712655338::1712655338::1::::<><>::
-FO Stormtrooper B.png::CompressedTexture2D::2855016349912313637::1712655338::1712655338::1::::<><>::
-FO Stormtrooper Ex.png::CompressedTexture2D::4619102680413110961::1712655338::1712655338::1::::<><>::
-FO Stormtrooper.png::CompressedTexture2D::4331671942301097854::1712655338::1712655338::1::::<><>::
-FO Walker Driver.png::CompressedTexture2D::7623599640255392810::1712655338::1712655338::1::::<><>::
-Hovertank Pilot.png::CompressedTexture2D::3139399859036155627::1712655338::1712655338::1::::<><>::
-Imperial Crew.png::CompressedTexture2D::7038176072917510479::1712655338::1712655338::1::::<><>::
-Imperial Gunner.png::CompressedTexture2D::1397492784322252106::1712655338::1712655338::1::::<><>::
-Jet Trooper.png::CompressedTexture2D::3580183445128771458::1712655338::1712655338::1::::<><>::
-Patrol Trooper.png::CompressedTexture2D::9008954689649579002::1712655338::1712655338::1::::<><>::
-Range Trooper.png::CompressedTexture2D::6010238959691150286::1712655338::1712655338::1::::<><>::
-Scout Trooper.png::CompressedTexture2D::5787004620208843282::1712655338::1712655338::1::::<><>::
-Shoretrooper 2.png::CompressedTexture2D::6930392608921021645::1712655338::1712655338::1::::<><>::
-Shoretrooper.png::CompressedTexture2D::7860785935160822667::1712655338::1712655338::1::::<><>::
-Sith Jet Trooper.png::CompressedTexture2D::5492663821906563158::1712655338::1712655338::1::::<><>::
-Sith Trooper.png::CompressedTexture2D::6744794014706186760::1712655338::1712655338::1::::<><>::
-Snowtrooper.png::CompressedTexture2D::2573219253737551900::1712655338::1712655338::1::::<><>::
-Stormtrooper B.png::CompressedTexture2D::6336327201843051299::1712655338::1712655338::1::::<><>::
-Stormtrooper C.png::CompressedTexture2D::7467779929312195937::1712655338::1712655338::1::::<><>::
-TIE Pilot.png::CompressedTexture2D::4108010814659958933::1712655338::1712655338::1::::<><>::
-Transport Pilot.png::CompressedTexture2D::4821815311016512173::1712655338::1712655338::1::::<><>::
-::res://graphics/ennemies/striker/::1712655338
-spr_StrikerDash_strip.png::CompressedTexture2D::7983298154358638802::1712655338::1712655338::1::::<><>::
-spr_StrikerDeath_strip.png::CompressedTexture2D::8075988690915602506::1712655338::1712655338::1::::<><>::
-spr_StrikerGetHit_strip.png::CompressedTexture2D::8389370837652151961::1712655338::1712655338::1::::<><>::
-spr_StrikerIdle_strip.png::CompressedTexture2D::3716953031460038502::1712655338::1712655338::1::::<><>::
-spr_StrikerJump_strip.png::CompressedTexture2D::7495084621872744817::1712655338::1712655338::1::::<><>::
-spr_StrikerRun_strip.png::CompressedTexture2D::3660321386820135853::1712655338::1712655338::1::::<><>::
-spr_StrikerSlash_stripNoEffect.png::CompressedTexture2D::8437055927117758578::1712655338::1712655338::1::::<><>::
-spr_StrikerSlash_stripOnlyEffect.png::CompressedTexture2D::3896014688700380802::1712655338::1712655338::1::::<><>::
-spr_StrikerSlash_stripWithEffect.png::CompressedTexture2D::811638552384510375::1712655338::1712655338::1::::<><>::
-::res://graphics/tileset/::1712655338
-asset page 1.png::CompressedTexture2D::6350536603733201632::1712655338::1712655338::1::::<><>::
-page 2.png::CompressedTexture2D::9497980623394134::1712655338::1712655338::1::::<><>::
-::res://graphics/Tower/::1714736753
-bullet.png::CompressedTexture2D::770333708081129060::1714648713::1714648713::1::::<><>::
-bullet_damage.png::CompressedTexture2D::3570213340680308824::1714732330::1714732371::1::::<><>::
-towerbase.png::CompressedTexture2D::3956085772810401715::1714648713::1714648713::1::::<><>::
-towerdamage.png::CompressedTexture2D::4830340527134448878::1714732310::1714732371::1::::<><>::
-towerrange.png::CompressedTexture2D::5632180521975890589::1714736753::1714736753::1::::<><>::
-towerspeed.png::CompressedTexture2D::1785236164899417571::1714734999::1714735021::1::::<><>::
-::res://graphics/ui/::1714732341
-00.png::CompressedTexture2D::7896896591240174176::1712655338::1712655338::1::::<><>::
-01.png::CompressedTexture2D::9131411926954189429::1712655338::1712655338::1::::<><>::
-02.png::CompressedTexture2D::5034447379277487595::1712655338::1712655338::1::::<><>::
-03.png::CompressedTexture2D::4086650661533861594::1712655338::1712655338::1::::<><>::
-04.png::CompressedTexture2D::871679231914897227::1712655338::1712655338::1::::<><>::
-05.png::CompressedTexture2D::8095868884210418671::1712655338::1712655338::1::::<><>::
-06.png::CompressedTexture2D::730489189833404189::1712655338::1712655338::1::::<><>::
-07.png::CompressedTexture2D::6129226025621110565::1712655338::1712655338::1::::<><>::
-All.png::CompressedTexture2D::8468960297086483039::1712655338::1712655338::1::::<><>::
-towerdamage.png::CompressedTexture2D::6404202389796736396::1714732341::1714732341::1::::<><>::
-::res://graphics/ui/font/::1712655338
-::res://graphics/ui/font/TepidTerminalFont_v231106/::1712655338
-license.txt::TextFile::-1::1712655338::0::1::::<><>::
-TepidTerminal.ttf::FontFile::3550692877198133855::1712655338::1712655338::1::::<><>::
-::res://sounds/::1712655338
-rain_thunder_loop.wav::AudioStreamWAV::5137513134252634513::1712655338::1712655338::1::::<><>::
-::res://sounds/sfx/::1712655338
-Falling.mp3::AudioStreamMP3::4962975583161685083::1712655338::1712655338::1::::<><>::
-::res://sounds/sfx/hit/::1712655338
-cyborg_hurt.wav::AudioStreamWAV::1305031394175461769::1712655338::1712655338::1::::<><>::
-::res://sounds/sfx/level_up/::1712655338
-win sound 2-1.wav::AudioStreamWAV::1576352474576874052::1712655338::1712655338::1::::<><>::
-win sound 2-2.wav::AudioStreamWAV::7770739154299751520::1712655338::1712655338::1::::<><>::
-win sound 2-3.wav::AudioStreamWAV::5848392351474496097::1712655338::1712655338::1::::<><>::
-::res://sounds/sfx/shoot/::1712655338
-8bit_bomb_explosion.wav::AudioStreamWAV::174003553375924472::1712655338::1712655338::1::::<><>::
-8bit_gunloop_explosion.wav::AudioStreamWAV::562789572277150936::1712655338::1712655338::1::::<><>::
-sfx_shoot.wav::AudioStreamWAV::990216083045897862::1712655338::1712655338::1::::<><>::
-::res://sounds/sfx/shoot/Misc Lasers/::1712655338
-Fire 1.mp3::AudioStreamMP3::6775132122678460840::1712655338::1712655338::1::::<><>::
-Fire 2.mp3::AudioStreamMP3::4772095338084988368::1712655338::1712655338::1::::<><>::
-Fire 3.mp3::AudioStreamMP3::4861294200358193600::1712655338::1712655338::1::::<><>::
-Fire 4.mp3::AudioStreamMP3::7544653204455194189::1712655338::1712655338::1::::<><>::
-Fire 5.mp3::AudioStreamMP3::1430117444086604956::1712655338::1712655338::1::::<><>::
-Fire 6.mp3::AudioStreamMP3::2909072579253055343::1712655338::1712655338::1::::<><>::
-Game Over.mp3::AudioStreamMP3::727227515065449083::1712655338::1712655338::1::::<><>::
-Hit 1.mp3::AudioStreamMP3::2333032454847773343::1712655338::1712655338::1::::<><>::
-Misc Lasers.mp3::AudioStreamMP3::2842534850921394625::1712655338::1712655338::1::::<><>::
-::res://sounds/sfx/shoot/sci-fi-sfx/::1712655338
-beep_01.ogg::AudioStreamOggVorbis::8731480076558610990::1712655338::1712655338::1::::<><>::
-beep_02.ogg::AudioStreamOggVorbis::4630458149568632881::1712655338::1712655338::1::::<><>::
-beep_03.ogg::AudioStreamOggVorbis::2098908376722119309::1712655338::1712655338::1::::<><>::
-explosion_01.ogg::AudioStreamOggVorbis::4961237418234249410::1712655338::1712655338::1::::<><>::
-explosion_02.ogg::AudioStreamOggVorbis::1099785306908562214::1712655338::1712655338::1::::<><>::
-loop_ambient_01.ogg::AudioStreamOggVorbis::1260387790590406436::1712655338::1712655338::1::::<><>::
-loop_ambient_weird.ogg::AudioStreamOggVorbis::7385655426540616885::1712655338::1712655338::1::::<><>::
-loop_machine_01.ogg::AudioStreamOggVorbis::2439358091325274186::1712655338::1712655338::1::::<><>::
-loop_machine_02.ogg::AudioStreamOggVorbis::1603430969277024526::1712655338::1712655338::1::::<><>::
-loop_machine_03.ogg::AudioStreamOggVorbis::5948259520070155334::1712655338::1712655338::1::::<><>::
-misc_01.ogg::AudioStreamOggVorbis::9092166624053722469::1712655338::1712655338::1::::<><>::
-misc_02.ogg::AudioStreamOggVorbis::6004487670134001566::1712655338::1712655338::1::::<><>::
-misc_03.ogg::AudioStreamOggVorbis::4021042349085710295::1712655338::1712655338::1::::<><>::
-misc_04.ogg::AudioStreamOggVorbis::2776500785527539739::1712655338::1712655338::1::::<><>::
-misc_05.ogg::AudioStreamOggVorbis::7460448299374038411::1712655338::1712655338::1::::<><>::
-misc_06.ogg::AudioStreamOggVorbis::7792280576552081216::1712655338::1712655338::1::::<><>::
-misc_07.ogg::AudioStreamOggVorbis::7041869052002507067::1712655338::1712655338::1::::<><>::
-misc_08.ogg::AudioStreamOggVorbis::602510533887909674::1712655338::1712655338::1::::<><>::
-misc_09.ogg::AudioStreamOggVorbis::3154586147458938366::1712655338::1712655338::1::::<><>::
-misc_10.ogg::AudioStreamOggVorbis::7059876880126520202::1712655338::1712655338::1::::<><>::
-misc_11.ogg::AudioStreamOggVorbis::6580619956016909527::1712655338::1712655338::1::::<><>::
-misc_12.ogg::AudioStreamOggVorbis::5955006244329690512::1712655338::1712655338::1::::<><>::
-retro_beep_01.ogg::AudioStreamOggVorbis::8244348008827397788::1712655338::1712655338::1::::<><>::
-retro_beep_02.ogg::AudioStreamOggVorbis::5044641097059821962::1712655338::1712655338::1::::<><>::
-retro_beep_03.ogg::AudioStreamOggVorbis::2125174623323689309::1712655338::1712655338::1::::<><>::
-retro_beep_04.ogg::AudioStreamOggVorbis::7655593871173998916::1712655338::1712655338::1::::<><>::
-retro_beep_05.ogg::AudioStreamOggVorbis::5817785658607147070::1712655338::1712655338::1::::<><>::
-retro_beep_06.ogg::AudioStreamOggVorbis::4659773620272666859::1712655338::1712655338::1::::<><>::
-retro_explosion.ogg::AudioStreamOggVorbis::6104077550476115599::1712655338::1712655338::1::::<><>::
-retro_laser_01.ogg::AudioStreamOggVorbis::8131963552290697210::1712655338::1712655338::1::::<><>::
-retro_laser_02.ogg::AudioStreamOggVorbis::4320506187859473431::1712655338::1712655338::1::::<><>::
-rocket_01.ogg::AudioStreamOggVorbis::1887825813129451789::1712655338::1712655338::1::::<><>::
-shoot_01.ogg::AudioStreamOggVorbis::1083224449052701252::1712655338::1712655338::1::::<><>::
-shoot_02.ogg::AudioStreamOggVorbis::5710915388282047286::1712655338::1712655338::1::::<><>::
-teleport_01.ogg::AudioStreamOggVorbis::1383541735812949756::1712655338::1712655338::1::::<><>::
-teleport_02.ogg::AudioStreamOggVorbis::4823256972997966916::1712655338::1712655338::1::::<><>::
-terminal_01.ogg::AudioStreamOggVorbis::5653834189372256866::1712655338::1712655338::1::::<><>::
-terminal_02.ogg::AudioStreamOggVorbis::3802745203715663209::1712655338::1712655338::1::::<><>::
-terminal_03.ogg::AudioStreamOggVorbis::4372826641721583266::1712655338::1712655338::1::::<><>::
-terminal_04.ogg::AudioStreamOggVorbis::5739862334210279699::1712655338::1712655338::1::::<><>::
-terminal_05.ogg::AudioStreamOggVorbis::9152281370932540019::1712655338::1712655338::1::::<><>::
-terminal_06.ogg::AudioStreamOggVorbis::7170067225235515437::1712655338::1712655338::1::::<><>::
-terminal_07.ogg::AudioStreamOggVorbis::603533992562491810::1712655338::1712655338::1::::<><>::
-terminal_08.ogg::AudioStreamOggVorbis::2052107105085856362::1712655338::1712655338::1::::<><>::
-terminal_09.ogg::AudioStreamOggVorbis::9056551270226051665::1712655338::1712655338::1::::<><>::
-weird_01.ogg::AudioStreamOggVorbis::7885469148269993374::1712655338::1712655338::1::::<><>::
-weird_02.ogg::AudioStreamOggVorbis::6340952748103121305::1712655338::1712655338::1::::<><>::
-weird_03.ogg::AudioStreamOggVorbis::5259495134610317620::1712655338::1712655338::1::::<><>::
-weird_04.ogg::AudioStreamOggVorbis::4873675476783252944::1712655338::1712655338::1::::<><>::
-weird_05.ogg::AudioStreamOggVorbis::8752991110088336978::1712655338::1712655338::1::::<><>::
-::res://sounds/sfx/shoot/Sound Effects FX 007/::1712655338
-FX061.mp3::AudioStreamMP3::4658901455893453134::1712655338::1712655338::1::::<><>::
-FX062.mp3::AudioStreamMP3::3791069776709369521::1712655338::1712655338::1::::<><>::
-FX063.mp3::AudioStreamMP3::3948651366702452466::1712655338::1712655338::1::::<><>::
-FX064.mp3::AudioStreamMP3::6110005381579353817::1712655338::1712655338::1::::<><>::
-FX065.mp3::AudioStreamMP3::3339372412060556111::1712655338::1712655338::1::::<><>::
-FX066.mp3::AudioStreamMP3::5105864091803467562::1712655338::1712655338::1::::<><>::
-FX067.mp3::AudioStreamMP3::7381976035039943401::1712655338::1712655338::1::::<><>::
-FX068.mp3::AudioStreamMP3::8147199617976220433::1712655338::1712655338::1::::<><>::
-FX069.mp3::AudioStreamMP3::7442930619459412380::1712655338::1712655338::1::::<><>::
-FX070.mp3::AudioStreamMP3::6849905362627888008::1712655338::1712655338::1::::<><>::
-::res://sounds/sfx/shoot/Sound Effects Shooting sounds 001/::1712655338
-SHOOT001.mp3::AudioStreamMP3::6175432262669564348::1712655338::1712655338::1::::<><>::
-SHOOT002.mp3::AudioStreamMP3::1370637161536554943::1712655338::1712655338::1::::<><>::
-SHOOT003.mp3::AudioStreamMP3::7726002066116415383::1712655338::1712655338::1::::<><>::
-SHOOT004.mp3::AudioStreamMP3::933852428430219957::1712655338::1712655338::1::::<><>::
-SHOOT005.mp3::AudioStreamMP3::420250078911366756::1712655338::1712655338::1::::<><>::
-SHOOT006.mp3::AudioStreamMP3::9042183484124254466::1712655338::1712655338::1::::<><>::
-SHOOT007.mp3::AudioStreamMP3::1481840316907593404::1712655338::1712655338::1::::<><>::
-SHOOT008.mp3::AudioStreamMP3::1068214582402576865::1712655338::1712655338::1::::<><>::
-SHOOT009.mp3::AudioStreamMP3::2113806726734390702::1712655338::1712655338::1::::<><>::
-SHOOT010.mp3::AudioStreamMP3::7665896245058961965::1712655338::1712655338::1::::<><>::
+::res://::1714742327
+bullet.gd::GDScript::-1::1714725090::0::1::::<>Node2D<>::
+bullet.tscn::PackedScene::1659879057920065143::1714742326::0::1::::<><>::res://bullet.gd<>uid://k8fjv4uhc4fg::::res://graphics/Tower/bullet.png
+busted.tscn::PackedScene::8798047054751336747::1714742326::0::1::::<><>::res://pausemenu.gdshader<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf
+Control.gd::GDScript::-1::1712927486::0::1::::<>Control<>::
+control.tscn::PackedScene::8946378409191747285::1714726968::0::1::::<><>::res://Control.gd<>uid://byksdr62sj2vx
+draft.tscn::PackedScene::3612944170605048577::1714725090::0::1::::<><>::res://level.gd<>uid://c7ykwcqp5vipy
+enemy.gd::GDScript::-1::1714725090::0::1::::<>PathFollow2D<>::
+enemyDraft.tscn::PackedScene::7069076017780272926::1714742326::0::1::::<><>::res://enemy.gd<>uid://cbdd7hhebmvkh::::res://graphics/testing_plan.png<>uid://bgw8x4xxu5sef::::res://graphics/ennemies/stormtrooper/FO Stormtrooper B.png<>uid://c7jly41aivamp::::res://graphics/ennemies/stormtrooper/Imperial Crew.png<>uid://ckixmuqmnpjsg::::res://graphics/ennemies/stormtrooper/Sith Jet Trooper.png<>uid://cmh4eafkuhcuf::::res://graphics/ennemies/drones/1 Drones/3/Idle.png<>uid://bsfc7t8mkwkhh::::res://graphics/ennemies/striker/spr_StrikerRun_strip.png
+icon.svg::CompressedTexture2D::7098298506989628831::1714725090::1714725090::1::::<><>::
+level.gd::GDScript::-1::1714734290::0::1::::<>Node2D<>::
+level.tscn::PackedScene::2174440518892807827::1714742326::0::1::::<><>::res://level.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://c7ykwcqp5vipy::::res://enemyDraft.tscn<>uid://cccrusw4xahl3::::res://pausemenu.tscn<>uid://cwqin7afga50w::::res://graphics/tileset/asset page 1.png<>uid://euovqup5a1c::::res://graphics/tileset/page 2.png<>uid://dprhn15n2ywhw::::res://graphics/ui/coin.png<>uid://dxl3sxky4o1ln::::res://busted.tscn<>uid://ddc3tnsyjatxg::::res://tower_controller.tscn
+pausemenu.gd::GDScript::-1::1714727860::0::1::::<>Control<>::
+pausemenu.gdshader::Shader::-1::1714742327::0::1::::<><>::
+pausemenu.tscn::PackedScene::4918416695679885502::1714742326::0::1::::<><>::uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>res://pausemenu.gd<>res://pausemenu.gdshader
+tour.gd::GDScript::-1::1714742326::0::1::::<>StaticBody2D<>::
+tourDraft.tscn::PackedScene::3267110970931736600::1714742326::0::1::::<><>::res://tour.gd<>uid://bqt8nmhrp1ro6::::res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf<>uid://bwmmfi22tmiv0::::res://graphics/Tower/towerbase.png
+tower_controller.gd::GDScript::-1::1714729566::0::1::::<>Button<>::
+tower_controller.tscn::PackedScene::7375692055095705200::1714725090::0::1::::<><>::res://tower_controller.gd<>uid://c8ep664wfdhtv
+::res://graphics/::1714742302
+testing_plan.png::CompressedTexture2D::4849463019330326111::1714725090::1714725090::1::::<><>::
+::res://graphics/effects/::1714725090
+::res://graphics/effects/bullets/::1714725090
+All_Fire_Bullet_Pixel_16x16_00.png::CompressedTexture2D::6400058985453026436::1714725090::1714725090::1::::<><>::
+All_Fire_Bullet_Pixel_16x16_01.png::CompressedTexture2D::6008674058304552233::1714725090::1714725090::1::::<><>::
+All_Fire_Bullet_Pixel_16x16_02.png::CompressedTexture2D::1737842383234591856::1714725090::1714725090::1::::<><>::
+All_Fire_Bullet_Pixel_16x16_03.png::CompressedTexture2D::3406211703490477596::1714725090::1714725090::1::::<><>::
+All_Fire_Bullet_Pixel_16x16_04.png::CompressedTexture2D::2460415204054275545::1714725090::1714725090::1::::<><>::
+All_Fire_Bullet_Pixel_16x16_05.png::CompressedTexture2D::4759455682626763537::1714725090::1714725090::1::::<><>::
+All_Fire_Bullet_Pixel_16x16_06.png::CompressedTexture2D::4898343745079266875::1714725090::1714725090::1::::<><>::
+All_Fire_Bullet_Pixel_16x16_07.png::CompressedTexture2D::3075274573383114532::1714725090::1714725090::1::::<><>::
+::res://graphics/effects/fire/::1714725090
+guide.png::CompressedTexture2D::3960907071823232093::1714725090::1714725090::1::::<><>::
+readme.TXT::TextFile::-1::1714725090::0::1::::<><>::
+::res://graphics/effects/fire/png/::1714725090
+::res://graphics/effects/fire/png/blue/::1714725090
+burning_loop_1.png::CompressedTexture2D::7968049808948038652::1714725090::1714725090::1::::<><>::
+burning_loop_2.png::CompressedTexture2D::1936495552530996042::1714725090::1714725090::1::::<><>::
+burning_loop_3.png::CompressedTexture2D::7788078883425356051::1714725090::1714725090::1::::<><>::
+burning_loop_4.png::CompressedTexture2D::228050540082652544::1714725090::1714725090::1::::<><>::
+burning_loop_5.png::CompressedTexture2D::828813818692737395::1714725090::1714725090::1::::<><>::
+::res://graphics/effects/fire/png/green/::1714725090
+burning_loop_1.png::CompressedTexture2D::2733344812836460519::1714725090::1714725090::1::::<><>::
+burning_loop_2.png::CompressedTexture2D::1487667737069867590::1714725090::1714725090::1::::<><>::
+burning_loop_3.png::CompressedTexture2D::1986412133551925711::1714725090::1714725090::1::::<><>::
+burning_loop_4.png::CompressedTexture2D::1228294069142843830::1714725090::1714725090::1::::<><>::
+burning_loop_5.png::CompressedTexture2D::341543680284341180::1714725090::1714725090::1::::<><>::
+::res://graphics/effects/fire/png/orange/::1714725090
+burning_loop_1.png::CompressedTexture2D::498240627359697138::1714725090::1714725090::1::::<><>::
+burning_loop_2.png::CompressedTexture2D::1396548616560990719::1714725090::1714725090::1::::<><>::
+burning_loop_3.png::CompressedTexture2D::5432063212203927356::1714725090::1714725090::1::::<><>::
+burning_loop_4.png::CompressedTexture2D::4554974285398103980::1714725090::1714725090::1::::<><>::
+burning_loop_5.png::CompressedTexture2D::1833028771393904554::1714725090::1714725090::1::::<><>::
+::res://graphics/effects/fire/png/purple/::1714725090
+burning_loop_1.png::CompressedTexture2D::3502110698792791981::1714725090::1714725090::1::::<><>::
+burning_loop_2.png::CompressedTexture2D::3972022360735357448::1714725090::1714725090::1::::<><>::
+burning_loop_3.png::CompressedTexture2D::7829025872310621127::1714725090::1714725090::1::::<><>::
+burning_loop_4.png::CompressedTexture2D::5323717889677128524::1714725090::1714725090::1::::<><>::
+burning_loop_5.png::CompressedTexture2D::6013431425086029558::1714725090::1714725090::1::::<><>::
+::res://graphics/effects/fire/png/white/::1714725090
+burning_loop_1.png::CompressedTexture2D::8540283998192976219::1714725090::1714725090::1::::<><>::
+burning_loop_2.png::CompressedTexture2D::204082521041493363::1714725090::1714725090::1::::<><>::
+burning_loop_3.png::CompressedTexture2D::4293160411512854524::1714725090::1714725090::1::::<><>::
+burning_loop_4.png::CompressedTexture2D::8478675755422035487::1714725090::1714725090::1::::<><>::
+burning_loop_5.png::CompressedTexture2D::8183170295757108706::1714725090::1714725090::1::::<><>::
+::res://graphics/ennemies/::1714725090
+::res://graphics/ennemies/drones/::1714725090
+license.txt::TextFile::-1::1714725090::0::1::::<><>::
+::res://graphics/ennemies/drones/1 Drones/::1714725090
+::res://graphics/ennemies/drones/1 Drones/1/::1714725090
+Death.png::CompressedTexture2D::4770228291419046421::1714725090::1714725090::1::::<><>::
+Idle.png::CompressedTexture2D::5370892105570942667::1714725090::1714725090::1::::<><>::
+Scan.png::CompressedTexture2D::2748664648936338842::1714725090::1714725090::1::::<><>::
+Walk.png::CompressedTexture2D::7825950536016033036::1714725090::1714725090::1::::<><>::
+Walk_scan.png::CompressedTexture2D::7053672802766564767::1714725090::1714725090::1::::<><>::
+::res://graphics/ennemies/drones/1 Drones/2/::1714725090
+Bomb.png::CompressedTexture2D::1409536402321979488::1714725090::1714725090::1::::<><>::
+Drop.png::CompressedTexture2D::941021780357313395::1714725090::1714725090::1::::<><>::
+::res://graphics/ennemies/drones/1 Drones/3/::1714725090
+Back.png::CompressedTexture2D::6955163206856143305::1714725090::1714725090::1::::<><>::
+Death.png::CompressedTexture2D::8434215366906433641::1714725090::1714725090::1::::<><>::
+Fire1.png::CompressedTexture2D::4721946468948320276::1714725090::1714725090::1::::<><>::
+Fire2.png::CompressedTexture2D::2964783843371136371::1714725090::1714725090::1::::<><>::
+Fire3.png::CompressedTexture2D::8721536090967253073::1714725090::1714725090::1::::<><>::
+Forward.png::CompressedTexture2D::7949905192339308083::1714725090::1714725090::1::::<><>::
+Idle.png::CompressedTexture2D::5631326079492237357::1714725090::1714725090::1::::<><>::
+::res://graphics/ennemies/drones/1 Drones/4/::1714725090
+Death.png::CompressedTexture2D::6271574832311362318::1714725090::1714725090::1::::<><>::
+Idle.png::CompressedTexture2D::2260114961026176555::1714725090::1714725090::1::::<><>::
+Landing.png::CompressedTexture2D::5940745669612051284::1714725090::1714725090::1::::<><>::
+Walk.png::CompressedTexture2D::6329380345397012490::1714725090::1714725090::1::::<><>::
+::res://graphics/ennemies/drones/1 Drones/5/::1714725090
+Death.png::CompressedTexture2D::6736887522877384423::1714725090::1714725090::1::::<><>::
+Idle.png::CompressedTexture2D::5767476512282401492::1714725090::1714725090::1::::<><>::
+Walk.png::CompressedTexture2D::6109856105610254557::1714725090::1714725090::1::::<><>::
+::res://graphics/ennemies/drones/1 Drones/5_2/::1714725090
+Death.png::CompressedTexture2D::520849278843227396::1714725090::1714725090::1::::<><>::
+Idle.png::CompressedTexture2D::1671983150211295559::1714725090::1714725090::1::::<><>::
+Walk.png::CompressedTexture2D::372249195972869984::1714725090::1714725090::1::::<><>::
+::res://graphics/ennemies/drones/1 Drones/6/::1714725090
+Capsule.png::CompressedTexture2D::8589838640498036699::1714725090::1714725090::1::::<><>::
+Drop.png::CompressedTexture2D::378235769632216256::1714725090::1714725090::1::::<><>::
+Walk2.png::CompressedTexture2D::1443296304037033567::1714725090::1714725090::1::::<><>::
+Walk.png::CompressedTexture2D::4050914835893321411::1714725090::1714725090::1::::<><>::
+::res://graphics/ennemies/stormtrooper/::1714725090
+Dark Trooper.png::CompressedTexture2D::9104253439044177579::1714725090::1714725090::1::::<><>::
+Fleet Technician.png::CompressedTexture2D::3126780516823028268::1714725090::1714725090::1::::<><>::
+FO Flametrooper.png::CompressedTexture2D::1735946708989742570::1714725090::1714725090::1::::<><>::
+FO Snowtrooper.png::CompressedTexture2D::1287397301287129641::1714725090::1714725090::1::::<><>::
+FO Stormtrooper B.png::CompressedTexture2D::2855016349912313637::1714725090::1714725090::1::::<><>::
+FO Stormtrooper Ex.png::CompressedTexture2D::4619102680413110961::1714725090::1714725090::1::::<><>::
+FO Stormtrooper.png::CompressedTexture2D::4331671942301097854::1714725090::1714725090::1::::<><>::
+FO Walker Driver.png::CompressedTexture2D::7623599640255392810::1714725090::1714725090::1::::<><>::
+Hovertank Pilot.png::CompressedTexture2D::3139399859036155627::1714725090::1714725090::1::::<><>::
+Imperial Crew.png::CompressedTexture2D::7038176072917510479::1714725090::1714725090::1::::<><>::
+Imperial Gunner.png::CompressedTexture2D::1397492784322252106::1714725090::1714725090::1::::<><>::
+Jet Trooper.png::CompressedTexture2D::3580183445128771458::1714725090::1714725090::1::::<><>::
+Patrol Trooper.png::CompressedTexture2D::9008954689649579002::1714725090::1714725090::1::::<><>::
+Range Trooper.png::CompressedTexture2D::6010238959691150286::1714725090::1714725090::1::::<><>::
+Scout Trooper.png::CompressedTexture2D::5787004620208843282::1714725090::1714725090::1::::<><>::
+Shoretrooper 2.png::CompressedTexture2D::6930392608921021645::1714725090::1714725090::1::::<><>::
+Shoretrooper.png::CompressedTexture2D::7860785935160822667::1714725090::1714725090::1::::<><>::
+Sith Jet Trooper.png::CompressedTexture2D::5492663821906563158::1714725090::1714725090::1::::<><>::
+Sith Trooper.png::CompressedTexture2D::6744794014706186760::1714725090::1714725090::1::::<><>::
+Snowtrooper.png::CompressedTexture2D::2573219253737551900::1714725090::1714725090::1::::<><>::
+Stormtrooper B.png::CompressedTexture2D::6336327201843051299::1714725090::1714725090::1::::<><>::
+Stormtrooper C.png::CompressedTexture2D::7467779929312195937::1714725090::1714725090::1::::<><>::
+TIE Pilot.png::CompressedTexture2D::4108010814659958933::1714725090::1714725090::1::::<><>::
+Transport Pilot.png::CompressedTexture2D::4821815311016512173::1714725090::1714725090::1::::<><>::
+::res://graphics/ennemies/striker/::1714725090
+spr_StrikerDash_strip.png::CompressedTexture2D::7983298154358638802::1714725090::1714725090::1::::<><>::
+spr_StrikerDeath_strip.png::CompressedTexture2D::8075988690915602506::1714725090::1714725090::1::::<><>::
+spr_StrikerGetHit_strip.png::CompressedTexture2D::8389370837652151961::1714725090::1714725090::1::::<><>::
+spr_StrikerIdle_strip.png::CompressedTexture2D::3716953031460038502::1714725090::1714725090::1::::<><>::
+spr_StrikerJump_strip.png::CompressedTexture2D::7495084621872744817::1714725090::1714725090::1::::<><>::
+spr_StrikerRun_strip.png::CompressedTexture2D::3660321386820135853::1714725090::1714725090::1::::<><>::
+spr_StrikerSlash_stripNoEffect.png::CompressedTexture2D::8437055927117758578::1714725090::1714725090::1::::<><>::
+spr_StrikerSlash_stripOnlyEffect.png::CompressedTexture2D::3896014688700380802::1714725090::1714725090::1::::<><>::
+spr_StrikerSlash_stripWithEffect.png::CompressedTexture2D::811638552384510375::1714725090::1714725090::1::::<><>::
+::res://graphics/tileset/::1714725090
+asset page 1.png::CompressedTexture2D::6350536603733201632::1714725090::1714725090::1::::<><>::
+page 2.png::CompressedTexture2D::9497980623394134::1714725090::1714725090::1::::<><>::
+::res://graphics/Tower/::1714742389
+bullet.png::CompressedTexture2D::770333708081129060::1714725090::1714725090::1::::<><>::
+towerbase.png::CompressedTexture2D::3956085772810401715::1714725090::1714725090::1::::<><>::
+towerdamage.png::CompressedTexture2D::3212958965852658016::1714742298::1714742303::1::::<><>::
+towerrange.png::CompressedTexture2D::8697746896554893932::1714742320::1714742321::1::::<><>::
+towerspeed.png::CompressedTexture2D::7416466647430467841::1714742389::1714742391::1::::<><>::
+::res://graphics/ui/::1714730318
+00.png::CompressedTexture2D::7896896591240174176::1714725090::1714725090::1::::<><>::
+01.png::CompressedTexture2D::9131411926954189429::1714725090::1714725090::1::::<><>::
+02.png::CompressedTexture2D::5034447379277487595::1714725090::1714725090::1::::<><>::
+03.png::CompressedTexture2D::4086650661533861594::1714725090::1714725090::1::::<><>::
+04.png::CompressedTexture2D::871679231914897227::1714725090::1714725090::1::::<><>::
+05.png::CompressedTexture2D::8095868884210418671::1714725090::1714725090::1::::<><>::
+06.png::CompressedTexture2D::730489189833404189::1714725090::1714725090::1::::<><>::
+07.png::CompressedTexture2D::6129226025621110565::1714725090::1714725090::1::::<><>::
+All.png::CompressedTexture2D::8468960297086483039::1714725090::1714725090::1::::<><>::
+coin.png::CompressedTexture2D::8247638774317880812::1714730270::1714730318::1::::<><>::
+level_screen.png::CompressedTexture2D::4709818715283133009::1712926678::1714728220::1::::<><>::
+::res://graphics/ui/font/::1714725090
+::res://graphics/ui/font/TepidTerminalFont_v231106/::1714725090
+license.txt::TextFile::-1::1714725090::0::1::::<><>::
+TepidTerminal.ttf::FontFile::3550692877198133855::1714725090::1714725090::1::::<><>::
+::res://sounds/::1714725090
+rain_thunder_loop.wav::AudioStreamWAV::5137513134252634513::1714725090::1714725090::1::::<><>::
+::res://sounds/sfx/::1714725090
+Falling.mp3::AudioStreamMP3::4962975583161685083::1714725090::1714725090::1::::<><>::
+::res://sounds/sfx/hit/::1714725090
+cyborg_hurt.wav::AudioStreamWAV::1305031394175461769::1714725090::1714725090::1::::<><>::
+::res://sounds/sfx/level_up/::1714725090
+win sound 2-1.wav::AudioStreamWAV::1576352474576874052::1714725090::1714725090::1::::<><>::
+win sound 2-2.wav::AudioStreamWAV::7770739154299751520::1714725090::1714725090::1::::<><>::
+win sound 2-3.wav::AudioStreamWAV::5848392351474496097::1714725090::1714725090::1::::<><>::
+::res://sounds/sfx/shoot/::1714725090
+8bit_bomb_explosion.wav::AudioStreamWAV::174003553375924472::1714725090::1714725090::1::::<><>::
+8bit_gunloop_explosion.wav::AudioStreamWAV::562789572277150936::1714725090::1714725090::1::::<><>::
+sfx_shoot.wav::AudioStreamWAV::990216083045897862::1714725090::1714725090::1::::<><>::
+::res://sounds/sfx/shoot/Misc Lasers/::1714725090
+Fire 1.mp3::AudioStreamMP3::6775132122678460840::1714725090::1714725090::1::::<><>::
+Fire 2.mp3::AudioStreamMP3::4772095338084988368::1714725090::1714725090::1::::<><>::
+Fire 3.mp3::AudioStreamMP3::4861294200358193600::1714725090::1714725090::1::::<><>::
+Fire 4.mp3::AudioStreamMP3::7544653204455194189::1714725090::1714725090::1::::<><>::
+Fire 5.mp3::AudioStreamMP3::1430117444086604956::1714725090::1714725090::1::::<><>::
+Fire 6.mp3::AudioStreamMP3::2909072579253055343::1714725090::1714725090::1::::<><>::
+Game Over.mp3::AudioStreamMP3::727227515065449083::1714725090::1714725090::1::::<><>::
+Hit 1.mp3::AudioStreamMP3::2333032454847773343::1714725090::1714725090::1::::<><>::
+Misc Lasers.mp3::AudioStreamMP3::2842534850921394625::1714725090::1714725090::1::::<><>::
+::res://sounds/sfx/shoot/sci-fi-sfx/::1714725090
+beep_01.ogg::AudioStreamOggVorbis::8731480076558610990::1714725090::1714725090::1::::<><>::
+beep_02.ogg::AudioStreamOggVorbis::4630458149568632881::1714725090::1714725090::1::::<><>::
+beep_03.ogg::AudioStreamOggVorbis::2098908376722119309::1714725090::1714725090::1::::<><>::
+explosion_01.ogg::AudioStreamOggVorbis::4961237418234249410::1714725090::1714725090::1::::<><>::
+explosion_02.ogg::AudioStreamOggVorbis::1099785306908562214::1714725090::1714725090::1::::<><>::
+loop_ambient_01.ogg::AudioStreamOggVorbis::1260387790590406436::1714725090::1714725090::1::::<><>::
+loop_ambient_weird.ogg::AudioStreamOggVorbis::7385655426540616885::1714725090::1714725090::1::::<><>::
+loop_machine_01.ogg::AudioStreamOggVorbis::2439358091325274186::1714725090::1714725090::1::::<><>::
+loop_machine_02.ogg::AudioStreamOggVorbis::1603430969277024526::1714725090::1714725090::1::::<><>::
+loop_machine_03.ogg::AudioStreamOggVorbis::5948259520070155334::1714725090::1714725090::1::::<><>::
+misc_01.ogg::AudioStreamOggVorbis::9092166624053722469::1714725090::1714725090::1::::<><>::
+misc_02.ogg::AudioStreamOggVorbis::6004487670134001566::1714725090::1714725090::1::::<><>::
+misc_03.ogg::AudioStreamOggVorbis::4021042349085710295::1714725090::1714725090::1::::<><>::
+misc_04.ogg::AudioStreamOggVorbis::2776500785527539739::1714725090::1714725090::1::::<><>::
+misc_05.ogg::AudioStreamOggVorbis::7460448299374038411::1714725090::1714725090::1::::<><>::
+misc_06.ogg::AudioStreamOggVorbis::7792280576552081216::1714725090::1714725090::1::::<><>::
+misc_07.ogg::AudioStreamOggVorbis::7041869052002507067::1714725090::1714725090::1::::<><>::
+misc_08.ogg::AudioStreamOggVorbis::602510533887909674::1714725090::1714725090::1::::<><>::
+misc_09.ogg::AudioStreamOggVorbis::3154586147458938366::1714725090::1714725090::1::::<><>::
+misc_10.ogg::AudioStreamOggVorbis::7059876880126520202::1714725090::1714725090::1::::<><>::
+misc_11.ogg::AudioStreamOggVorbis::6580619956016909527::1714725090::1714725090::1::::<><>::
+misc_12.ogg::AudioStreamOggVorbis::5955006244329690512::1714725090::1714725090::1::::<><>::
+retro_beep_01.ogg::AudioStreamOggVorbis::8244348008827397788::1714725090::1714725090::1::::<><>::
+retro_beep_02.ogg::AudioStreamOggVorbis::5044641097059821962::1714725090::1714725090::1::::<><>::
+retro_beep_03.ogg::AudioStreamOggVorbis::2125174623323689309::1714725090::1714725090::1::::<><>::
+retro_beep_04.ogg::AudioStreamOggVorbis::7655593871173998916::1714725090::1714725090::1::::<><>::
+retro_beep_05.ogg::AudioStreamOggVorbis::5817785658607147070::1714725090::1714725090::1::::<><>::
+retro_beep_06.ogg::AudioStreamOggVorbis::4659773620272666859::1714725090::1714725090::1::::<><>::
+retro_explosion.ogg::AudioStreamOggVorbis::6104077550476115599::1714725090::1714725090::1::::<><>::
+retro_laser_01.ogg::AudioStreamOggVorbis::8131963552290697210::1714725090::1714725090::1::::<><>::
+retro_laser_02.ogg::AudioStreamOggVorbis::4320506187859473431::1714725090::1714725090::1::::<><>::
+rocket_01.ogg::AudioStreamOggVorbis::1887825813129451789::1714725090::1714725090::1::::<><>::
+shoot_01.ogg::AudioStreamOggVorbis::1083224449052701252::1714725090::1714725090::1::::<><>::
+shoot_02.ogg::AudioStreamOggVorbis::5710915388282047286::1714725090::1714725090::1::::<><>::
+teleport_01.ogg::AudioStreamOggVorbis::1383541735812949756::1714725090::1714725090::1::::<><>::
+teleport_02.ogg::AudioStreamOggVorbis::4823256972997966916::1714725090::1714725090::1::::<><>::
+terminal_01.ogg::AudioStreamOggVorbis::5653834189372256866::1714725090::1714725090::1::::<><>::
+terminal_02.ogg::AudioStreamOggVorbis::3802745203715663209::1714725090::1714725090::1::::<><>::
+terminal_03.ogg::AudioStreamOggVorbis::4372826641721583266::1714725090::1714725090::1::::<><>::
+terminal_04.ogg::AudioStreamOggVorbis::5739862334210279699::1714725090::1714725090::1::::<><>::
+terminal_05.ogg::AudioStreamOggVorbis::9152281370932540019::1714725090::1714725090::1::::<><>::
+terminal_06.ogg::AudioStreamOggVorbis::7170067225235515437::1714725090::1714725090::1::::<><>::
+terminal_07.ogg::AudioStreamOggVorbis::603533992562491810::1714725090::1714725090::1::::<><>::
+terminal_08.ogg::AudioStreamOggVorbis::2052107105085856362::1714725090::1714725090::1::::<><>::
+terminal_09.ogg::AudioStreamOggVorbis::9056551270226051665::1714725090::1714725090::1::::<><>::
+weird_01.ogg::AudioStreamOggVorbis::7885469148269993374::1714725090::1714725090::1::::<><>::
+weird_02.ogg::AudioStreamOggVorbis::6340952748103121305::1714725090::1714725090::1::::<><>::
+weird_03.ogg::AudioStreamOggVorbis::5259495134610317620::1714725090::1714725090::1::::<><>::
+weird_04.ogg::AudioStreamOggVorbis::4873675476783252944::1714725090::1714725090::1::::<><>::
+weird_05.ogg::AudioStreamOggVorbis::8752991110088336978::1714725090::1714725090::1::::<><>::
+::res://sounds/sfx/shoot/Sound Effects FX 007/::1714725090
+FX061.mp3::AudioStreamMP3::4658901455893453134::1714725090::1714725090::1::::<><>::
+FX062.mp3::AudioStreamMP3::3791069776709369521::1714725090::1714725090::1::::<><>::
+FX063.mp3::AudioStreamMP3::3948651366702452466::1714725090::1714725090::1::::<><>::
+FX064.mp3::AudioStreamMP3::6110005381579353817::1714725090::1714725090::1::::<><>::
+FX065.mp3::AudioStreamMP3::3339372412060556111::1714725090::1714725090::1::::<><>::
+FX066.mp3::AudioStreamMP3::5105864091803467562::1714725090::1714725090::1::::<><>::
+FX067.mp3::AudioStreamMP3::7381976035039943401::1714725090::1714725090::1::::<><>::
+FX068.mp3::AudioStreamMP3::8147199617976220433::1714725090::1714725090::1::::<><>::
+FX069.mp3::AudioStreamMP3::7442930619459412380::1714725090::1714725090::1::::<><>::
+FX070.mp3::AudioStreamMP3::6849905362627888008::1714725090::1714725090::1::::<><>::
+::res://sounds/sfx/shoot/Sound Effects Shooting sounds 001/::1714725090
+SHOOT001.mp3::AudioStreamMP3::6175432262669564348::1714725090::1714725090::1::::<><>::
+SHOOT002.mp3::AudioStreamMP3::1370637161536554943::1714725090::1714725090::1::::<><>::
+SHOOT003.mp3::AudioStreamMP3::7726002066116415383::1714725090::1714725090::1::::<><>::
+SHOOT004.mp3::AudioStreamMP3::933852428430219957::1714725090::1714725090::1::::<><>::
+SHOOT005.mp3::AudioStreamMP3::420250078911366756::1714725090::1714725090::1::::<><>::
+SHOOT006.mp3::AudioStreamMP3::9042183484124254466::1714725090::1714725090::1::::<><>::
+SHOOT007.mp3::AudioStreamMP3::1481840316907593404::1714725090::1714725090::1::::<><>::
+SHOOT008.mp3::AudioStreamMP3::1068214582402576865::1714725090::1714725090::1::::<><>::
+SHOOT009.mp3::AudioStreamMP3::2113806726734390702::1714725090::1714725090::1::::<><>::
+SHOOT010.mp3::AudioStreamMP3::7665896245058961965::1714725090::1714725090::1::::<><>::

@@ -1,50 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://58kynu1eepm6"]
+[gd_scene load_steps=18 format=3 uid="uid://58kynu1eepm6"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_wy2s2"]
 [ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
 [ext_resource type="PackedScene" uid="uid://c7ykwcqp5vipy" path="res://enemyDraft.tscn" id="2_1p7hm"]
-[ext_resource type="Texture2D" uid="uid://cbdd7hhebmvkh" path="res://graphics/testing_plan.png" id="2_dowv7"]
+[ext_resource type="PackedScene" uid="uid://cccrusw4xahl3" path="res://pausemenu.tscn" id="3_igtpb"]
 [ext_resource type="Texture2D" uid="uid://cwqin7afga50w" path="res://graphics/tileset/asset page 1.png" id="3_ivj83"]
 [ext_resource type="Texture2D" uid="uid://euovqup5a1c" path="res://graphics/tileset/page 2.png" id="4_jc2iy"]
-[ext_resource type="PackedScene" uid="uid://mtnooanifrgb" path="res://pause.tscn" id="5_de5at"]
+[ext_resource type="Texture2D" uid="uid://dprhn15n2ywhw" path="res://graphics/ui/coin.png" id="5_0lmqf"]
+[ext_resource type="PackedScene" uid="uid://dxl3sxky4o1ln" path="res://busted.tscn" id="6_6nndd"]
 [ext_resource type="PackedScene" uid="uid://ddc3tnsyjatxg" path="res://tower_controller.tscn" id="7_wwqny"]
-
-[sub_resource type="Animation" id="Animation_b4xgt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-1152, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_s2pvo"]
-resource_name = "new_wave"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 1.1, 1.5),
-"transitions": PackedFloat32Array(0.25, 1, 1, 2),
-"update": 0,
-"values": [Vector2(-1152, 0), Vector2(-10, 0), Vector2(10, 0), Vector2(1152, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_l4362"]
-_data = {
-"RESET": SubResource("Animation_b4xgt"),
-"new_wave": SubResource("Animation_s2pvo")
-}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sj31k"]
 texture = ExtResource("3_ivj83")
@@ -235,72 +199,74 @@ point_count = 9
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2ltr"]
 size = Vector2(38, 78)
 
+[sub_resource type="Animation" id="Animation_b4xgt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1152, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s2pvo"]
+resource_name = "new_wave"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.1, 1.5),
+"transitions": PackedFloat32Array(0.25, 1, 1, 2),
+"update": 0,
+"values": [Vector2(-1152, 0), Vector2(-10, 0), Vector2(10, 0), Vector2(1152, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l4362"]
+_data = {
+"RESET": SubResource("Animation_b4xgt"),
+"new_wave": SubResource("Animation_s2pvo")
+}
+
 [node name="Level" type="Node2D"]
 z_index = 4096
 y_sort_enabled = true
 script = ExtResource("1_wy2s2")
 enemy = ExtResource("2_1p7hm")
 
-[node name="Interface" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+[node name="buttons" type="Node2D" parent="."]
 
-[node name="pause" parent="Interface" instance=ExtResource("5_de5at")]
-process_mode = 1
-visible = false
-clip_contents = true
-layout_mode = 1
+[node name="Button" parent="buttons" instance=ExtResource("7_wwqny")]
+offset_left = 408.0
+offset_top = 336.0
+offset_right = 416.0
+offset_bottom = 344.0
 
-[node name="HealthBar" type="ProgressBar" parent="Interface"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 27.0
-grow_horizontal = 2
-show_percentage = false
+[node name="Button2" parent="buttons" instance=ExtResource("7_wwqny")]
+offset_left = 166.0
+offset_top = 213.0
+offset_right = 174.0
+offset_bottom = 221.0
 
-[node name="Label" type="Label" parent="Interface"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1152.0
-offset_right = 31104.0
-offset_bottom = 18144.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_yxshp")
-theme_override_font_sizes/font_size = 150
-text = "WAVE 1"
-horizontal_alignment = 1
-vertical_alignment = 1
-justification_flags = 0
+[node name="Button3" parent="buttons" instance=ExtResource("7_wwqny")]
+offset_left = 635.0
+offset_top = 541.0
+offset_right = 643.0
+offset_bottom = 549.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Interface/Label"]
-libraries = {
-"": SubResource("AnimationLibrary_l4362")
-}
-
-[node name="GoldShow" type="HBoxContainer" parent="Interface"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 33.0
-offset_right = 155.0
-offset_bottom = 74.0
-theme_override_constants/separation = 8
-
-[node name="Gold" type="TextureRect" parent="Interface/GoldShow"]
-layout_mode = 2
-texture = ExtResource("2_dowv7")
-
-[node name="Label" type="Label" parent="Interface/GoldShow"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_yxshp")
-theme_override_font_sizes/font_size = 30
-text = "000"
-vertical_alignment = 2
+[node name="Button4" parent="buttons" instance=ExtResource("7_wwqny")]
+offset_left = 942.0
+offset_top = 352.0
+offset_right = 950.0
+offset_bottom = 360.0
 
 [node name="TileMap" type="TileMap" parent="."]
 z_as_relative = false
@@ -345,28 +311,70 @@ position = Vector2(1152, 310)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtZone"]
 shape = SubResource("RectangleShape2D_s2ltr")
 
-[node name="buttons" type="Node2D" parent="."]
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
 
-[node name="Button" parent="buttons" instance=ExtResource("7_wwqny")]
-offset_left = 408.0
-offset_top = 336.0
-offset_right = 416.0
-offset_bottom = 344.0
+[node name="busted" parent="Interface" instance=ExtResource("6_6nndd")]
+process_mode = 3
+visible = false
+layout_mode = 1
 
-[node name="Button2" parent="buttons" instance=ExtResource("7_wwqny")]
-offset_left = 166.0
-offset_top = 213.0
-offset_right = 174.0
-offset_bottom = 221.0
+[node name="pausemenu" parent="Interface" instance=ExtResource("3_igtpb")]
+layout_mode = 1
 
-[node name="Button3" parent="buttons" instance=ExtResource("7_wwqny")]
-offset_left = 635.0
-offset_top = 541.0
-offset_right = 643.0
-offset_bottom = 549.0
+[node name="HealthBar" type="ProgressBar" parent="Interface"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -569.0
+offset_right = 569.0
+offset_bottom = 29.0
+grow_horizontal = 2
+show_percentage = false
 
-[node name="Button4" parent="buttons" instance=ExtResource("7_wwqny")]
-offset_left = 942.0
-offset_top = 352.0
-offset_right = 950.0
-offset_bottom = 360.0
+[node name="Label" type="Label" parent="Interface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1152.0
+offset_right = 33408.0
+offset_bottom = 19440.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_yxshp")
+theme_override_font_sizes/font_size = 150
+text = "WAVE 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Interface/Label"]
+libraries = {
+"": SubResource("AnimationLibrary_l4362")
+}
+
+[node name="GoldShow" type="HBoxContainer" parent="Interface"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 33.0
+offset_right = 155.0
+offset_bottom = 74.0
+theme_override_constants/separation = 8
+
+[node name="Gold" type="TextureRect" parent="Interface/GoldShow"]
+layout_mode = 2
+texture = ExtResource("5_0lmqf")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Interface/GoldShow"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yxshp")
+theme_override_font_sizes/font_size = 30
+text = "000"
+vertical_alignment = 2

@@ -7,9 +7,9 @@ var created = false
 
 func _on_pressed():
 	if cost <= level.gold:
-			var tower_scene = load("res://tourDraft.tscn")
-			var tower = tower_scene.instantiate()
-			self.add_child(tower)
-			level.add_gold(-cost)
-			$button_visual.visible = false
-			created = true
+		var tower_scene = load("res://tourDraft.tscn")
+		var tower = tower_scene.instantiate()
+		self.add_child(tower)
+		level.add_gold(-cost)
+		$button_visual.visible = false
+		created = true

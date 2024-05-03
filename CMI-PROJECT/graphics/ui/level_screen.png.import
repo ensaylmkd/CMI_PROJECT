@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq4o5ljl1lr5a"
-path="res://.godot/imported/bullet_damage.png-30499ffbd8b96404a30b01151be98f64.ctex"
+uid="uid://b8dqa5g6iaa06"
+path="res://.godot/imported/level_screen.png-804335c642f6fa016f3ead9fe17515b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Tower/bullet_damage.png"
-dest_files=["res://.godot/imported/bullet_damage.png-30499ffbd8b96404a30b01151be98f64.ctex"]
+source_file="res://graphics/ui/level_screen.png"
+dest_files=["res://.godot/imported/level_screen.png-804335c642f6fa016f3ead9fe17515b5.ctex"]
 
 [params]
 

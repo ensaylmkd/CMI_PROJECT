@@ -1,6 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://bl3dbv8kwuxy4"]
+[gd_scene load_steps=9 format=3 uid="uid://d0pxssne6wypx"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_j764s"]
+[ext_resource type="Texture2D" uid="uid://byksdr62sj2vx" path="res://graphics/ui/level_screen.png" id="2_1qsrf"]
+[ext_resource type="FontFile" uid="uid://cvjs5msog0vje" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="2_xhu4u"]
+[ext_resource type="Shader" path="res://pausemenu.gdshader" id="3_ho6fg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_15mdf"]
+shader = ExtResource("3_ho6fg")
+shader_parameter/lod = 0.75
+
+[sub_resource type="Animation" id="Animation_ywl04"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-260, -92)]
+}
+
+[sub_resource type="Animation" id="Animation_w33kc"]
+resource_name = "loop_bg"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(-60, -92), Vector2(-260, -92), Vector2(-60, -92)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b4nv3"]
+_data = {
+"RESET": SubResource("Animation_ywl04"),
+"loop_bg": SubResource("Animation_w33kc")
+}
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,6 +56,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j764s")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -92.0
+offset_right = 2376.0
+offset_bottom = 1391.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1qsrf")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_15mdf")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -18,33 +86,38 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -127.0
-offset_top = -73.5
-offset_right = 127.0
-offset_bottom = 73.5
+offset_left = -110.0
+offset_top = -80.0
+offset_right = 110.0
+offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 13
+alignment = 1
 
 [node name="play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../quit")
-focus_neighbor_bottom = NodePath("../options")
+theme_override_fonts/font = ExtResource("2_xhu4u")
 theme_override_font_sizes/font_size = 40
 text = "PLAY"
 
 [node name="options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../play")
-focus_neighbor_bottom = NodePath("../quit")
+theme_override_fonts/font = ExtResource("2_xhu4u")
 theme_override_font_sizes/font_size = 40
 text = "OPTIONS"
 
 [node name="quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../options")
-focus_neighbor_bottom = NodePath("../play")
+theme_override_fonts/font = ExtResource("2_xhu4u")
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../TextureRect")
+libraries = {
+"": SubResource("AnimationLibrary_b4nv3")
+}
 
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_button_pressed"]

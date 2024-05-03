@@ -10,7 +10,6 @@ extends Node2D
 @onready var path = $Path2D
 @onready var nb_enemies = 0
 @onready var hp = 100
-@onready var pause = $Interface/pause
 @onready var healthbar = $Interface/HealthBar	
 @onready var goldcount = $Interface/GoldShow/Label
 
@@ -40,6 +39,9 @@ func _process(_delta):
 		next_wave()
 
 func next_wave():
+	$Interface/Label.text = "WAVE" + str(wave+1)
+	$Interface/Label/AnimationPlayer.play("new_wave")
+	await not $Interface/Label/AnimationPlayer.is_playing()
 	await get_tree().create_timer(1).timeout
 	nb_enemies += 6
 	var wave_data = retriver_wave_data()
@@ -72,9 +74,19 @@ func damage_base(damage):
 	hp -= damage
 	healthbar.value = hp
 	if hp <= 0:
+		$Interface/busted.visible = true
+		get_tree().paused = true
+		$Interface/busted/AnimationPlayer.play("busted")
+		await get_tree().create_timer(1).timeout
+		$Interface/busted/AnimationPlayer.play("idle")
+		await get_tree().create_timer(5).timeout
+		get_tree().paused = false
+		$Interface/busted.visible = false
 		get_tree().change_scene_to_file("res://control.tscn")
 		
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_COMMA:
 			add_gold(9999999999)
+		if event.pressed and event.keycode == KEY_SPACE:
+			damage_base(9999)
