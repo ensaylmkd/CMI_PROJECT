@@ -114,11 +114,6 @@ func _on_upgrade_firerate_pressed():
 	level.add_gold(-next_upgrade)
 	next_upgrade += 10
 	
-#	lvl_firerate += 1
-#	label_speed.text ="speed: lvl "+str(lvl_firerate)
-#	time.wait_time -=0.3 
-#	level.add_gold(-next_upgrade)
-#	next_upgrade += 10
 	
 func _on_upgrade_range_pressed():
 	emit_signal("upgraded")
@@ -137,11 +132,7 @@ func _on_upgrade_range_pressed():
 	
 	level.add_gold(-next_upgrade)
 	next_upgrade += 10
-#	lvl_range += 1
-#	label_range.text ="range: lvl "+str(lvl_range)
-#	area_range.shape.radius += 20
-#	level.add_gold(-next_upgrade)
-#	next_upgrade += 10
+
 
 func _on_upgrade_cancel_pressed():
 	emit_signal("upgraded")
