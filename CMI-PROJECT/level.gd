@@ -10,7 +10,7 @@ extends Node2D
 @onready var path = $Path2D
 @onready var nb_enemies = 0
 @onready var hp = 100
-@onready var healthbar = $Interface/HealthBar	
+@onready var healthbar = $Interface/HealthBar
 @onready var goldcount = $Interface/GoldShow/Label
 
 @export var gold = 30

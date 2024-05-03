@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://58kynu1eepm6"]
+[gd_scene load_steps=20 format=3 uid="uid://58kynu1eepm6"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_wy2s2"]
 [ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://euovqup5a1c" path="res://graphics/tileset/page 2.png" id="4_jc2iy"]
 [ext_resource type="Texture2D" uid="uid://dprhn15n2ywhw" path="res://graphics/ui/coin.png" id="5_0lmqf"]
 [ext_resource type="PackedScene" uid="uid://dxl3sxky4o1ln" path="res://busted.tscn" id="6_6nndd"]
+[ext_resource type="Texture2D" uid="uid://d3h2bae2te0va" path="res://graphics/ui/tile000.png" id="6_7wupq"]
+[ext_resource type="Texture2D" uid="uid://b1ocac7m8fq5x" path="res://graphics/ui/tile001.png" id="7_t8tgo"]
 [ext_resource type="PackedScene" uid="uid://ddc3tnsyjatxg" path="res://tower_controller.tscn" id="7_wwqny"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sj31k"]
@@ -318,6 +320,13 @@ offset_right = 1152.0
 offset_bottom = 648.0
 mouse_filter = 2
 
+[node name="HealthBar" type="TextureProgressBar" parent="Interface"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+texture_under = ExtResource("6_7wupq")
+texture_progress = ExtResource("7_t8tgo")
+
 [node name="busted" parent="Interface" instance=ExtResource("6_6nndd")]
 process_mode = 3
 visible = false
@@ -325,17 +334,6 @@ layout_mode = 1
 
 [node name="pausemenu" parent="Interface" instance=ExtResource("3_igtpb")]
 layout_mode = 1
-
-[node name="HealthBar" type="ProgressBar" parent="Interface"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -569.0
-offset_right = 569.0
-offset_bottom = 29.0
-grow_horizontal = 2
-show_percentage = false
 
 [node name="Label" type="Label" parent="Interface"]
 layout_mode = 1
