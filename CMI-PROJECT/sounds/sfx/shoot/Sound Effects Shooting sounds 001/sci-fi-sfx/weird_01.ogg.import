@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dkl1r3wmq7223"
+path="res://.godot/imported/weird_01.ogg-bdec0d5aaf91ab1692b769d039694446.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/sfx/shoot/Sound Effects Shooting sounds 001/sci-fi-sfx/weird_01.ogg"
+dest_files=["res://.godot/imported/weird_01.ogg-bdec0d5aaf91ab1692b769d039694446.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

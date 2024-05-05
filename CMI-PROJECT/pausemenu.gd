@@ -21,17 +21,24 @@ func testPause():
 		resume()
 
 func _on_resume_pressed():
+	button_menu_pressed()
 	resume()
 	
 func _on_restart_pressed():
+	button_menu_pressed()
 	resume()
 	get_tree().reload_current_scene()
 
 func _on_quit_pressed():
+	button_menu_pressed()
 	get_tree().quit()
 
 func _process(delta):
 	testPause()
+
+func button_menu_pressed():
+	$sfx.play()
+	await $sfx.finished
 
 func _on_pausebutton_pressed():
 		pause()

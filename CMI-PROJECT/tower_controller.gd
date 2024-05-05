@@ -7,6 +7,7 @@ var created = false
 
 func _on_pressed():
 	if cost <= level.gold:
+		$AudioStreamPlayer.play()
 		var tower_scene = load("res://tourDraft.tscn")
 		var tower = tower_scene.instantiate()
 		self.add_child(tower)

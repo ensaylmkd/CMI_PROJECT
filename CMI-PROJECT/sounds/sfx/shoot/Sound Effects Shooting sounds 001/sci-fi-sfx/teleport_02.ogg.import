@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cayolqllmjnom"
+path="res://.godot/imported/teleport_02.ogg-12512333ef32a882260398ac8f0c6490.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/sfx/shoot/Sound Effects Shooting sounds 001/sci-fi-sfx/teleport_02.ogg"
+dest_files=["res://.godot/imported/teleport_02.ogg-12512333ef32a882260398ac8f0c6490.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://58kynu1eepm6"]
+[gd_scene load_steps=22 format=3 uid="uid://58kynu1eepm6"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_wy2s2"]
 [ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_yxshp"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://d3h2bae2te0va" path="res://graphics/ui/tile000.png" id="6_7wupq"]
 [ext_resource type="Texture2D" uid="uid://b1ocac7m8fq5x" path="res://graphics/ui/tile001.png" id="7_t8tgo"]
 [ext_resource type="PackedScene" uid="uid://ddc3tnsyjatxg" path="res://tower_controller.tscn" id="7_wwqny"]
+[ext_resource type="AudioStream" uid="uid://b5u3vqyx73scu" path="res://sounds/cyber_runer_files/Cyber_runer_files/cyber_runner.mp3" id="12_cfb6l"]
+[ext_resource type="AudioStream" uid="uid://iavcdycatkvo" path="res://sounds/sfx/shoot/8bit_gunloop_explosion.wav" id="13_7llfs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sj31k"]
 texture = ExtResource("3_ivj83")
@@ -215,6 +217,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-1152, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1152, 648)]
+}
 
 [sub_resource type="Animation" id="Animation_s2pvo"]
 resource_name = "new_wave"
@@ -328,22 +342,13 @@ scale = Vector2(2, 2)
 texture_under = ExtResource("6_7wupq")
 texture_progress = ExtResource("7_t8tgo")
 
-[node name="busted" parent="Interface" instance=ExtResource("6_6nndd")]
-process_mode = 3
-visible = false
-layout_mode = 1
-
-[node name="pausemenu" parent="Interface" instance=ExtResource("3_igtpb")]
-layout_mode = 1
-
 [node name="Label" type="Label" parent="Interface"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1152.0
-offset_right = -1144.0
-offset_bottom = 13.0
+offset_right = -1152.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_yxshp")
@@ -357,6 +362,14 @@ justification_flags = 0
 libraries = {
 "": SubResource("AnimationLibrary_l4362")
 }
+
+[node name="busted" parent="Interface" instance=ExtResource("6_6nndd")]
+process_mode = 3
+visible = false
+layout_mode = 1
+
+[node name="pausemenu" parent="Interface" instance=ExtResource("3_igtpb")]
+layout_mode = 1
 
 [node name="GoldShow" type="HBoxContainer" parent="Interface"]
 layout_mode = 0
@@ -377,3 +390,12 @@ theme_override_fonts/font = ExtResource("1_yxshp")
 theme_override_font_sizes/font_size = 30
 text = "000"
 vertical_alignment = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_cfb6l")
+volume_db = -10.0
+autoplay = true
+
+[node name="hurtsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_7llfs")
+volume_db = -10.0

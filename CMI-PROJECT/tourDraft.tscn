@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmsu3tpr2hxsq"]
+[gd_scene load_steps=7 format=3 uid="uid://bmsu3tpr2hxsq"]
 
 [ext_resource type="Script" path="res://tour.gd" id="1_23wbe"]
 [ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="2_ucynp"]
 [ext_resource type="Texture2D" uid="uid://bwmmfi22tmiv0" path="res://graphics/Tower/towerbase.png" id="3_rmlbw"]
+[ext_resource type="AudioStream" uid="uid://bfs7teac0um80" path="res://sounds/sfx/shoot/Sound Effects Shooting sounds 001/sci-fi-sfx/misc_04.ogg" id="4_f5k1e"]
+[ext_resource type="AudioStream" uid="uid://diyg65738oo6k" path="res://sounds/sfx/level_up/win sound 2-2.wav" id="4_o5ctq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6c04h"]
 resource_local_to_scene = true
@@ -193,6 +195,12 @@ offset_right = 132.0
 offset_bottom = 79.0
 theme_override_font_sizes/font_size = 10
 text = "cost:   "
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_o5ctq")
+
+[node name="cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f5k1e")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

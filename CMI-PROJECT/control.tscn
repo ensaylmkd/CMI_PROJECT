@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0pxssne6wypx"]
+[gd_scene load_steps=11 format=3 uid="uid://d0pxssne6wypx"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_j764s"]
-[ext_resource type="Texture2D" uid="uid://byksdr62sj2vx" path="res://graphics/ui/level_screen.png" id="2_1qsrf"]
-[ext_resource type="FontFile" uid="uid://cvjs5msog0vje" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="2_xhu4u"]
+[ext_resource type="Texture2D" uid="uid://b8dqa5g6iaa06" path="res://graphics/ui/level_screen.png" id="2_1qsrf"]
+[ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="2_xhu4u"]
 [ext_resource type="Shader" path="res://pausemenu.gdshader" id="3_ho6fg"]
+[ext_resource type="AudioStream" uid="uid://b5u3vqyx73scu" path="res://sounds/cyber_runer_files/Cyber_runer_files/cyber_runner.mp3" id="5_3gcwj"]
+[ext_resource type="AudioStream" uid="uid://d3no0b8uvns24" path="res://sounds/sfx/shoot/Sound Effects Shooting sounds 001/sci-fi-sfx/terminal_05.ogg" id="6_ivn1o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_15mdf"]
 shader = ExtResource("3_ho6fg")
@@ -23,6 +25,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-260, -92)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2174, 1223)]
+}
 
 [sub_resource type="Animation" id="Animation_w33kc"]
 resource_name = "loop_bg"
@@ -38,7 +52,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 10, 20),
 "transitions": PackedFloat32Array(-2, -2, -2),
 "update": 0,
-"values": [Vector2(-60, -92), Vector2(-260, -92), Vector2(-60, -92)]
+"values": [Vector2(-60, -425), Vector2(-260, -425), Vector2(-60, -425)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b4nv3"]
@@ -63,8 +77,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -260.0
 offset_top = -92.0
-offset_right = 2376.0
-offset_bottom = 1391.0
+offset_right = 762.0
+offset_bottom = 483.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_1qsrf")
@@ -102,6 +116,7 @@ theme_override_font_sizes/font_size = 40
 text = "PLAY"
 
 [node name="options" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_xhu4u")
 theme_override_font_sizes/font_size = 40
@@ -118,6 +133,14 @@ root_node = NodePath("../TextureRect")
 libraries = {
 "": SubResource("AnimationLibrary_b4nv3")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3gcwj")
+volume_db = -20.0
+autoplay = true
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ivn1o")
 
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_button_pressed"]

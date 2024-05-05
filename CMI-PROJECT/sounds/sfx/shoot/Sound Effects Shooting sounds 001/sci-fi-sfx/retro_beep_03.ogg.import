@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://5jpky1sq25vd"
+path="res://.godot/imported/retro_beep_03.ogg-96277784e98da059b4b8314348ee8abd.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/sfx/shoot/Sound Effects Shooting sounds 001/sci-fi-sfx/retro_beep_03.ogg"
+dest_files=["res://.godot/imported/retro_beep_03.ogg-96277784e98da059b4b8314348ee8abd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

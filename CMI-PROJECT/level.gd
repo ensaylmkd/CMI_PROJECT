@@ -21,6 +21,7 @@ var started = false
 # La fonction _ready() est lue dès que le noeud qui est accroché à ce script est dans la "current scene"
 # Cette fonction ne sera lue qu'une seule fois (à part si elle est rappelée)
 func _ready():
+	$Interface/Label/AnimationPlayer.play("RESET")
 	healthbar.max_value = hp
 	healthbar.value = hp
 	goldcount.text = str(gold)
@@ -91,6 +92,7 @@ func add_gold(g):
 	goldcount.text = str(gold)
 	
 func damage_base(damage):
+	$hurtsound.play()
 	hp -= damage
 	healthbar.value = hp
 	if hp <= 0:

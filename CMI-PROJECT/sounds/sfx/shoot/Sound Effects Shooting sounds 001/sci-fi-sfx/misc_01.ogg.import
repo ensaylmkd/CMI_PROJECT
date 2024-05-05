@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d2skwkiefnwcr"
+path="res://.godot/imported/misc_01.ogg-b63393cd4e1dc7dd6b9728ba6d1ced8f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/sfx/shoot/Sound Effects Shooting sounds 001/sci-fi-sfx/misc_01.ogg"
+dest_files=["res://.godot/imported/misc_01.ogg-b63393cd4e1dc7dd6b9728ba6d1ced8f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

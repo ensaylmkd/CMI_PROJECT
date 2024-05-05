@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cccrusw4xahl3"]
+[gd_scene load_steps=9 format=3 uid="uid://cccrusw4xahl3"]
 
 [ext_resource type="FontFile" uid="uid://bqt8nmhrp1ro6" path="res://graphics/ui/font/TepidTerminalFont_v231106/TepidTerminal.ttf" id="1_jlbxr"]
 [ext_resource type="Script" path="res://pausemenu.gd" id="1_lwjoa"]
 [ext_resource type="Shader" path="res://pausemenu.gdshader" id="1_mb08x"]
+[ext_resource type="AudioStream" uid="uid://d3no0b8uvns24" path="res://sounds/sfx/shoot/Sound Effects Shooting sounds 001/sci-fi-sfx/terminal_05.ogg" id="4_kbm0l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o0wnt"]
 shader = ExtResource("1_mb08x")
@@ -301,6 +302,9 @@ size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("1_jlbxr")
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kbm0l")
 
 [connection signal="pressed" from="VBoxContainer/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="VBoxContainer/restart" to="." method="_on_restart_pressed"]

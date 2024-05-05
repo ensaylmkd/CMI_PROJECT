@@ -82,6 +82,7 @@ func _on_upgrade_notifier_pressed():
 	upgrade_control.visible = false
 
 func _on_upgrade_damage_pressed():
+	button_upgrade_pressed()
 	emit_signal("upgraded")
 	
 	if lvl_damage < 4 :	
@@ -102,6 +103,7 @@ func _on_upgrade_damage_pressed():
 	next_upgrade += int(lvl_counter * 11)
 	
 func _on_upgrade_firerate_pressed():
+	button_upgrade_pressed()
 	emit_signal("upgraded")
 	
 	if lvl_firerate < 4 :	
@@ -122,6 +124,7 @@ func _on_upgrade_firerate_pressed():
 	next_upgrade += int(lvl_counter * 10)
 	
 func _on_upgrade_range_pressed():
+	button_upgrade_pressed()
 	emit_signal("upgraded")
 	
 	if lvl_range < 4 :	
@@ -144,5 +147,9 @@ func _on_upgrade_range_pressed():
 	next_upgrade += int(lvl_counter*10)
 	print(lvl_counter)
 
+func button_upgrade_pressed():
+	$sfx.play()
+
 func _on_upgrade_cancel_pressed():
+	$cancel.play()
 	emit_signal("upgraded")
