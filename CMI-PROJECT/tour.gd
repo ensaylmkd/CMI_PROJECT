@@ -91,7 +91,7 @@ func _on_upgrade_damage_pressed():
 	else:
 		if not big_upgraded :
 			$Towerbase.texture = load("res://graphics/Tower/towerdamage.png")	
-			damage += 20
+			damage += 50
 			big_upgraded = true
 			type_bullet = 1
 		label_damage.text ="damage: lvl MAX"
@@ -111,7 +111,7 @@ func _on_upgrade_firerate_pressed():
 	else:
 		if not big_upgraded :
 			$Towerbase.texture = load("res://graphics/Tower/towerspeed.png")	
-			time.wait_time = 0.4
+			time.wait_time = 0.35
 			big_upgraded = true
 			type_bullet = 2	
 		label_speed.text ="speed: lvl MAX"
@@ -131,7 +131,9 @@ func _on_upgrade_range_pressed():
 	else:
 		if not big_upgraded : 
 			$Towerbase.texture = load("res://graphics/Tower/towerrange.png")
-			area_range.shape.radius += 200
+			area_range.shape.radius += 300
+			time.wait_time += 0.4
+			damage += 100
 			big_upgraded = true
 			type_bullet = 3
 		label_range.text ="range: lvl MAX"
@@ -141,7 +143,6 @@ func _on_upgrade_range_pressed():
 	lvl_counter += 1
 	next_upgrade += int(lvl_counter*10)
 	print(lvl_counter)
-
 
 func _on_upgrade_cancel_pressed():
 	emit_signal("upgraded")

@@ -3,11 +3,11 @@ extends PathFollow2D
 @export var type: int
 
 @onready var types = [
-	{"type":1, "speed":0.01, "health":10, "gold":10, "damage":5},
+	{"type":1, "speed":0.01, "health":10, "gold":5, "damage":5},
 	{"type":2, "speed":0.02, "health":20, "gold":15, "damage":7},
-	{"type":3, "speed":0.025, "health":50, "gold":20, "damage":10},
-	{"type":4, "speed":0.30, "health":80, "gold":30, "damage":15},
-	{"type":5, "speed":0.03, "health":200, "gold":50, "damage":20}
+	{"type":3, "speed":0.025, "health":70, "gold":20, "damage":10},
+	{"type":4, "speed":0.30, "health":150, "gold":30, "damage":15},
+	{"type":5, "speed":0.03, "health":300, "gold":50, "damage":20}
 ]
 
 

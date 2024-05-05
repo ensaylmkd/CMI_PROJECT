@@ -13,8 +13,8 @@ extends Node2D
 @onready var healthbar = $Interface/HealthBar
 @onready var goldcount = $Interface/GoldShow/Label
 
-@export var gold = 30
-var wave = 0 # Numéro de vague, va influencer le nb d'ennemis et leur niveau
+@export var gold = 45
+var wave = 1 # Numéro de vague, va influencer le nb d'ennemis et leur niveau
 signal finish_spawn
 var started = false
 
@@ -39,11 +39,11 @@ func _process(_delta):
 		next_wave()
 
 func next_wave():
-	$Interface/Label.text = "WAVE " + str(wave+1)
+	$Interface/Label.text = "WAVE " + str(wave)
 	$Interface/Label/AnimationPlayer.play("new_wave")
 	await not $Interface/Label/AnimationPlayer.is_playing()
 	await get_tree().create_timer(1).timeout
-	nb_enemies += 6
+	nb_enemies += 5
 	var wave_data = retriver_wave_data()
 	spawn_enemies(wave_data)
 	await finish_spawn
@@ -51,10 +51,31 @@ func next_wave():
 
 func retriver_wave_data():
 	var wave_data = []
-	var lvl_enemy_max = nb_enemies%5
-	for i in range(nb_enemies):
-		wave_data.append(["enemy", randf_range(0.2,0.5), randi_range(0, lvl_enemy_max)])
+	var mobs_left = nb_enemies
+	if wave >= 15:
+		for i in range(randi_range(mobs_left/20,mobs_left/5)):
+			wave_data.append(["enemy", randf_range(0.2,0.5),4])
+			mobs_left -= 1
+	if wave >= 10:
+		for i in range(randi_range(mobs_left/10,mobs_left/5)):
+			wave_data.append(["enemy", randf_range(0.2,0.5),3])
+			mobs_left -= 1
+	
+	if wave >= 6:
+		for i in range(randi_range(mobs_left/5,mobs_left/3)):
+			wave_data.append(["enemy", randf_range(0.2,0.5),2])
+			mobs_left -= 1
+	
+	if wave > 2:
+		for i in range(randi_range(mobs_left/4,mobs_left/2)):
+			wave_data.append(["enemy", randf_range(0.2,0.5),1])
+			mobs_left -= 1
+	
+	for i in range(mobs_left):
+			wave_data.append(["enemy", randf_range(0.2,0.5),0])
+
 	wave += 1
+	wave_data.shuffle()
 	return wave_data
 
 func spawn_enemies(wave_data):
