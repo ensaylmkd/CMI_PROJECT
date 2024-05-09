@@ -82,6 +82,8 @@ func _on_upgrade_notifier_pressed():
 	upgrade_control.visible = false
 
 func _on_upgrade_damage_pressed():
+	if level.gold < next_upgrade:
+		return
 	button_upgrade_pressed()
 	emit_signal("upgraded")
 	
@@ -103,6 +105,8 @@ func _on_upgrade_damage_pressed():
 	next_upgrade += int(lvl_counter * 11)
 	
 func _on_upgrade_firerate_pressed():
+	if level.gold < next_upgrade:
+		return
 	button_upgrade_pressed()
 	emit_signal("upgraded")
 	
@@ -124,6 +128,8 @@ func _on_upgrade_firerate_pressed():
 	next_upgrade += int(lvl_counter * 10)
 	
 func _on_upgrade_range_pressed():
+	if level.gold < next_upgrade:
+		return
 	button_upgrade_pressed()
 	emit_signal("upgraded")
 	
